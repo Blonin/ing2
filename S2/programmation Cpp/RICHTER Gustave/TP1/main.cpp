@@ -47,7 +47,11 @@ double sum_sqrt (Vector &v){
 Vector::Vector(unsigned int s){
 	sz =s;
 	elements=new double[s];
-	//TODO init les case je sais pas 
+	for (unsigned int i = 0; i < s; i++)
+	{
+		elements[i]=0;
+	}
+	
 }
 
 unsigned int Vector::size() const {
@@ -55,7 +59,11 @@ unsigned int Vector::size() const {
 }
 
 double& Vector::operator[](unsigned int i){
-	//TODO
+    if (i>=sz)
+    {
+        cerr<<"Array index out of bounds"<<endl;
+        exit(-1);
+    }
 	return (elements[i]);
 }
 
