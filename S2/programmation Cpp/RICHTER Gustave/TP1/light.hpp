@@ -7,6 +7,7 @@ class Light {
 	public :
 	 	void toggle(){on= !on;}
 	 	bool isOn(){return on;}
-        friend std::ostream&operator << (std::ostream&, const Light);
+        friend std::cout << this.isOn << std::endl;
+
 };
 #endif 
