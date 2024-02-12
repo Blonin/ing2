@@ -1,8 +1,8 @@
 TP Fraction Sur la base de l'exemple 0 (voir Ex0) :
 
-Réaliser les exemples ci dessous
+RÃ©aliser les exemples ci dessous
 Ex1 :
-. Créer le code de la classe Fraction.cpp pour tester avec le programme main.cpp
+. CrÃ©er le code de la classe Fraction.cpp pour tester avec le programme main.cpp
 . Ajouter la fonction amie
 
 Ex2 : Utilisation new et delete
