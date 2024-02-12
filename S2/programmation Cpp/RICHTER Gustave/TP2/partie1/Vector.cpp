@@ -20,7 +20,29 @@ using namespace std;
 #include <iostream>
 #include "Vector.hpp"
 
+Vector::Vector(unsigned int s){
+    sz=s;
+    elements = new double[s];
+    for (unsigned int i = 0; i < s; i++)
+    {
+        elements[i]=0;
+    }
+}
 
+Vector::~Vector(){}
+
+unsigned int Vector::size() const {
+    return (sz);
+}
+
+double& Vector ::operator[](unsigned int i){
+    if (i>=sz)
+    {
+        cerr<<"Array index out of bounds"<<endl;
+        exit(-1);
+    }
+    return(elements[i]);
+}
 
 void bad_copy1(Vector v1) {
   // Constructeur par copie
@@ -62,28 +84,16 @@ void bad_copy2(Vector v1) {
   cout << "v2[0] = " << v2[0] << endl;
 }
 
-Vector::Vector(unsigned int s){
-    sz=s;
-    elements = new double[s];
-    for (unsigned int i = 0; i < s; i++)
+Vector &Vector::operator=(const Vector&v){
+    sz=v.sz;
+    delete[] elements;
+    elements = new double [sz];
+    for (int  i = 0; i < sz; i++)
     {
-        elements[i]=0;
+        elements[i]=v.elements[i];
     }
-}
-
-Vector::~Vector(){}
-
-unsigned int Vector::size() const {
-    return (sz);
-}
-
-double& Vector ::operator[](unsigned int i){
-    if (i>=sz)
-    {
-        cerr<<"Array index out of bounds"<<endl;
-        exit(-1);
-    }
-    return(elements[i]);
+    return * this;
+    
 }
 
 int main(void) {
@@ -95,6 +105,9 @@ int main(void) {
 
   cout << "bad_copy2(v) (opérateur d'affectation):" << endl;
   bad_copy2(v);
+
+    //tester la création des vecteurs par cop
+  
 
   return EXIT_SUCCESS;
 }

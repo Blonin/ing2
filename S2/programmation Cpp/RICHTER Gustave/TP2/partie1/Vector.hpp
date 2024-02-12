@@ -13,6 +13,8 @@ class Vector {
     Vector(const Vector &v);
     //destructeur
     ~Vector();
+    //Affectation
+    Vector &operator =(const Vector &v);
 
     unsigned int size() const;
     double& operator[](unsigned int i);
