@@ -1,0 +1,24 @@
+# Makefile pour compiler tous les fichiers *.c
+
+CC = gcc
+
+# Cible pour compiler et exécuter le programme
+all: $(TARGET)
+
+# Dépendances
+$(TARGET): $(OBJS)
+	$(CC) -o $(TARGET) $(OBJS)
+
+# Règles pour compiler les fichiers sources
+%.o: %.c
+	$(CC) -c -Wall $< -o $@
+
+# Dépendances automatiques pour les fichiers sources
+$(OBJS): $(SRCS:.c=.o)
+
+# Définir les fichiers sources
+SRCS = *.c
+
+# Cible pour nettoyer les fichiers intermédiaires
+clean:
+	rm -f *.o $(TARGET)
