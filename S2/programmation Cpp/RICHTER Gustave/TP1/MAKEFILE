@@ -1,6 +1,6 @@
 # Makefile pour compiler tous les fichiers *.c
 
-CC = gcc
+CC = g++
 
 # Cible pour compiler et exécuter le programme
 all: $(TARGET)
@@ -14,10 +14,10 @@ $(TARGET): $(OBJS)
 	$(CC) -c -Wall $< -o $@
 
 # Dépendances automatiques pour les fichiers sources
-$(OBJS): $(SRCS:.c=.o)
+$(OBJS): $(SRCS:.cpp=.o)
 
 # Définir les fichiers sources
-SRCS = *.c
+SRCS = main.cpp
 
 # Cible pour nettoyer les fichiers intermédiaires
 clean:

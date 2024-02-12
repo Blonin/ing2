@@ -20,14 +20,43 @@
 //codage fait sur telephone a revoir
 
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 #define N 40
+
 #include "light.hpp"
+#include "vector.hpp"
 
 void sum(int *p, int n, int d[]){
 	int i;
 	*p=0;
 	for( i=0; i<n; i++) *p +=d[i];
+}
+
+
+double sum_sqrt (Vector &v){
+	double sum = 0;
+	for (unsigned int i = 0; i < v.size(); ++i)
+	{
+		sum += sqrt(v[i]);
+	}
+	return (sum);
+}
+
+Vector::Vector(unsigned int s){
+	sz =s;
+	elements=new double[s];
+	//TODO init les case je sais pas 
+}
+
+unsigned int Vector::size() const {
+	return (sz);
+}
+
+double& Vector::operator[](unsigned int i){
+	//TODO
+	return (elements[i]);
 }
 
 int main()
@@ -69,6 +98,9 @@ int main()
 	{
 		cout<<tl[i].isOn()<<endl;
 	}
-		
+
+	//Exercice 3 
+	
+
 	return EXIT_SUCCESS;
 }

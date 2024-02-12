@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
     // désallocation de tf
 
     // Exercice 3.2
-    cout <<"Nombre de fractions a crer ?" <<endl;
+    cout <<"Nombre de fractions a creer ?" <<endl;
     int m;
     cin >>m;
     Fraction **ppf= new Fraction*[n];
