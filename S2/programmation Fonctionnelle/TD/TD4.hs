@@ -119,3 +119,98 @@ prefixes = foldl (\z x -> z ++ [last z ++ [x]]) [[]]
 --prefixes l = foldr (\x z -> (init (head z)) : z) [l] l
 --prefixes = foldr (\x z -> [] : (map (x :) z)) [[]]
 --prefixes l = map (`take` l) [0..(length l)]
+
+
+--- Exercice 7.a
+prefixes :: [a] -> [[a]]
+--prefixes = foldl (\z x -> z ++ [(last z) ++ [x]]) [[]]
+--prefixes l = foldr (\x z -> (init (head z)) : z) [l] l
+--prefixes = foldr (\x z -> [] : (map (x :) z)) [[]]
+prefixes l = map (`take` l) [0..(length l)]
+
+--- Exerice 7.b
+join :: [a] -> [b] -> [(a, b)]
+--join l1 l2 = foldl (\z x -> foldl (\z1 y -> z1 ++ [(x, y)]) z l2) [] l1
+--join l = foldl (\z x -> z ++ map (\y -> (y, x)) l) []
+--join l1 l2 = concatMap (\x -> map (\y -> (x,y)) l2) l1
+join l1 l2 = [(x, y) | x <- l1, y <- l2]
+
+--- Exercice 8.a
+data User = User { nom :: String, prenom :: String, age :: Integer }
+  deriving (Eq, Ord)
+data Student = Student { stuUser :: User, year :: Integer }
+  deriving (Eq, Ord)
+data Teacher = Teacher { tchrUser :: User, dep :: String, seniority :: Integer }
+  deriving (Eq, Ord)
+
+--- Exercice 8.b.i
+yearList :: [Student] -> Integer -> [Student]
+yearList sts y = sort [st | st <- sts, (year st) == y]
+--yearList sts y = sort (filter (\st -> (year st) == y) l)
+
+--- Exercice 8.b.ii
+deptList :: [Teacher] -> String -> [Teacher]
+deptList ts d = sort [t | t <- ts, (dep t) == d]
+--deptList ts d = sort (filter (\t -> (dep t) == d) ts)
+
+--- Exercice 8.b.iii
+partOfFurniture :: [Teacher] -> [Teacher]
+partOfFurniture ts = sort [t | t <- ts, seniority t >= 10]
+--partOfFurniture ts = sort (filter (\t -> (seniority t) >= 10) ts)
+
+--- Exercice 8.b.iv
+studentsOlderThanTeachers :: [Student] -> [Teacher] -> [(Student, Teacher)]
+studentsOlderThanTeachers sts ts = [(st, t) | st <- sts, t <- ts, (age (stuUser st)) >= (age (tchrUser t))]
+
+--- Exercice 8.c.i
+data Room = Room { rName :: String, rBat :: String, capacity :: Integer } deriving (Eq, Ord)
+data Course = Course { teacher :: Teacher, cYear :: Integer, room :: Room, start :: Integer, duration :: Integer } deriving (Eq, Ord)
+
+--- Exercice 8.c.ii
+schedule :: [Course] -> Teacher -> [Course]
+schedule cs t = sortOn start [c | c <- cs, (teacher c) == t]
+--schedule cs t = sortOn start (filter (\c -> (teacher c) == t) cs)
+
+timetable :: [Course] -> Student -> [Course]
+timetable cs st = sortOn start [c | c <- cs, (cYear c) == year st]
+--timetable cs t = sortOn start (filter (\c (cYear c) == year st) cs)
+
+overbooked :: [Student] -> [Course] -> [Course]
+overbooked sts cs = [c | c <- cs, (capacity (room c)) < (toInteger (length (yearList sts (cYear c))))]
+--overbooked sts = filter (\c -> (capacity (room c)) < (toInteger (length (yearList sts (cYear c))))
+
+conflicts :: [Course] -> [(Course, Course)]
+conflicts cs = [(c1, c2) | c1 <- cs, c2 <- cs, (c1 < c2) && c1 `conflictsWith` c2]
+
+conflictsWith :: Course -> Course -> Bool
+c1 `conflictsWith` c2 = ((c1 /= c2)) && (start c1 == start c2) && ((teacher c1 == teacher c2) || (cYear c1 == cYear c2) || (room c1 == room c2))
+
+--- Exercice 9.a
+fixed :: (a -> a) -> a -> Int -> a
+--fixed next initial times = last $ take times $ iterate next initial -- <=> last (take times (iterate next initial))
+--fixed next initial times = last (take times (iterate next initial))
+fixed next initial times = iterate next initial !! times
+
+whilst :: (a -> a) -> a -> (a -> Bool) -> a
+--whilst next initial cont = fromJust (find (not . cont) (iterate next initial))
+whilst next initial cont = head $ dropWhile cont $ iterate next initial
+-- head sur un dropwhile
+-- first !cont ?
+
+recurrence :: (Integer -> a -> a) -> a -> [a]
+recurrence f u0 = map snd $ iterate (\(i, u) -> (i))
+recurrence = 
+--iterate :: forall a. (a -> a) -> a -> [a]
+--Defined in ‘GHC.List’ (base-4.18.1.0)
+
+--iterate f x returns an infinite list of repeated applications of f to x :
+
+--iterate f x == [x, f x, f (f x), ...]
+--Note that iterate is lazy, potentially leading to thunk build-up if the consumer doesn't force each iterate. See iterate' for a strict variant of this function.
+
+-- >>> take 10 $ iterate not True
+--[True,False,True,False...
+
+-- >>> take 10 $ iterate (+3) 42
+--[42,45,48,51,54,57,60,63...
+
