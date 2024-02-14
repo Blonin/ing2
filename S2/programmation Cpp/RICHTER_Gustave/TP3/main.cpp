@@ -12,7 +12,7 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 13-02-2024
+ * @ Modified time: 14-02-2024
  */
 
 using namespace std;
@@ -20,19 +20,23 @@ using namespace std;
 #include <iostream>
 #include "Fraction.hpp"
 
-int main()
-{
-  /*
+void exo1(){
   //vérif exo 1
   Fraction f1(4,5);
-  Fraction f2(3,11);
+  Fraction f2(3,4);
   cout << f1<<endl;
   cout << f2<<endl;
 
   f1 *= f2;
   cout << f1;
 
+
+}
+
+void exo2(){
+
   //vérif exo 2
+  Fraction f2(3,11);
   Fraction f3(13,3);
   Fraction res = f2*f3;
   cout << res;
@@ -44,11 +48,36 @@ int main()
   //code produisant une erreur
   //res = 2*f2;
   //cout << res;
-*/
-  //verif exo3
+}
+
+void exo3(){
   Fraction f1(4,5);
   Fraction res = 2*f1;
   cout << "res exo3 : " << res;
+  
+  Fraction f1(4,5);
+  Fraction f2(3,11);
+  Fraction f=f1*f2;
+  cout << f;
+  f=f1*f2*f;
+  cout << f;
+  f=f1*2;
+  cout << f;
+  f=2*f1;
+  cout << f;
+  
+}
+
+int main()
+{
+  char n;
+  exo1();
+  printf("Pause appuyer sur une touche pour passer a l'exo 2");
+  scanf("%c",&n);
+  exo2();
+  printf("Pause appuyer sur une touche pour passer a l'exo 3");
+  scanf("%c",&n);
+  exo3();
 
   return EXIT_SUCCESS;
 }

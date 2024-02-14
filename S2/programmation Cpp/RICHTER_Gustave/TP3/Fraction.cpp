@@ -12,7 +12,7 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 13-02-2024
+ * @ Modified time: 14-02-2024
  */
 
 #include <iostream>
@@ -58,8 +58,10 @@ void Fraction::operator*=(const Fraction& f){
     numerateur*= f.getNum();
     denominateur*= f.getDen();
 }
-
+/*
 Fraction& Fraction
+*/
+
 
 int Fraction::getNum()const{
     return numerateur;
