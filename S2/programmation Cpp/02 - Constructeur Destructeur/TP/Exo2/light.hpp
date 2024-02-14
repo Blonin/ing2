@@ -4,12 +4,10 @@
 class Light
 {
   private:
-    bool on        // Indique si la lumière est allumée (true) ou éteinte (false).
-  protected
+    bool on;        // Indique si la lumière est allumée (true) ou éteinte (false).
+  protected:
+    
   public:
-    Light ();      // Constructeur par défaut qui crée une lumière éteinte
-    ~Ligth();      // Destructeur
-
     void toggle(); // Si la lumière est allumée, elle sera éteinte et vice versa.
     bool IsOn();   // Retourne true si la lumière est allumée, false sinon
 

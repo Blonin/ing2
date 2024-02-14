@@ -70,6 +70,7 @@ void exo3(){
 
 int main()
 {
+  //var juste utilisé pour mettre en pause le programme
   char n;
   exo1();
   printf("Pause appuyer sur une touche pour passer a l'exo 2");

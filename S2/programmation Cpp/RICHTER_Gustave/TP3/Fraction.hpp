@@ -12,7 +12,7 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 13-02-2024
+ * @ Modified time: 14-02-2024
  */
 
 
@@ -48,6 +48,17 @@ class Fraction
 
 };
 
-    //Déclaration hors de la classe
+  
+    /**
+     * @brief 
+     * 
+     * @param f1 
+     * @param f2 
+     * @return Fraction 
+     */
     Fraction operator* (const Fraction& f1, const Fraction& f2);
+  
+
+
+
 #endif
