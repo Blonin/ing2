@@ -1,5 +1,5 @@
 
-#1.
+# 1.
 en passant par le code assembler on remarquera qu'un ordi utilise
 un système CISC alors que l'autre utilise un RISC, CISCétant la surement 
 meilleur
@@ -10,14 +10,16 @@ x86 vs ARM
 donc on ne peut pas tout simplement comparé le temps de résolution que sur le 
 nombre de MIPS
 
-#2.
+# 2.
 1 000 000/40 = 25 000 
 CPI=(cycles/instructions)
 
-#3. IPC = intruction par cycle
+# 3. 
+    IPC = intruction par cycle
 ou  IPC = 35 000 / 17 000 =  2.059
 
-#4.  time = nCrorale*10-6sec = 1.04 sec
+# 4.
+    time = nCrorale*10-6sec = 1.04 sec
     
     nCyclefp = 200 000 * 10 *0.6 = 800000
     nCycleautre = 200 000 *40 =  240 000
@@ -40,7 +42,8 @@ par example
         9/19=0.47 => elle prend donc maintenant 47% du temps
         alors qu'avanat elle prenais 90% du temps
 
-#6.  20/100 * 2 = 0.4
+# 6. 
+    20/100 * 2 = 0.4
     70/100 * 1.3 = 0.91
 on prefère donc utilise une amélioration de performance de 1.3 qui est utilisé 70% du temps
 S= 1 /(1/(fs+fp/s))
@@ -48,25 +51,31 @@ S= 1 /(1/(fs+fp/s))
  b. s=1.3 fp=0.7    S = 1 / (0.3+0.7/1.3) = 1/tnew = 0.84 <-- meilleur temps 
 
 
-#7.  S = 1 / (1/ (fs+ fp/s)) 
+# 7.
+  S = 1 / (1/ (fs+ fp/s)) 
     ==> 1.2 = 1 / (0.6+0.4/s) ==> s = 1.71  pour une amélioration de 20%
     ==> 1.6 = 1 / (0.6+0.4/s) ==> s = 16 c'est énorme et c'est que pour une amélioration du système global de 60% 
 il vaut mieux améliorer toutes les sous-système que d'améliorer un seul
 
-#8.  S = 1/(1/ (fs + fp/s))
+# 8.
+S = 1/(1/ (fs + fp/s))
     ==> told/tnew = 1/0.2+0.8/4 =2.5
 
-#9.  S = 1/(0.1+0.9/4) = 3.08
+# 9.  
+    S = 1/(0.1+0.9/4) = 3.08
 
-#10. S = 1/(0.52+48/4) = 1.56
+# 10. 
+    S = 1/(0.52+48/4) = 1.56
     //!\ autre méthode
     S = 1/( (0.2+0.8/4) *0.6 +0.4 )
 
-#11. S = 1 / ( (0.2+0.8/4) *0.6 + (0.1 + 0.9/4)*0.4 ) = 2.70
+# 11. 
+    S = 1 / ( (0.2+0.8/4) *0.6 + (0.1 + 0.9/4)*0.4 ) = 2.70
     E= S/P = 2.70/4 = 0.67 ==> efficacité de 67%
 
 
-#12. //pour 12
+# 12.
+    //pour 12
     S = 1/(0.2+0.8/12)= 3.75
     S = 1/(0.1+0.9/12) = 5.71
     S = 1/( (0.2+0.8/12) *0.6 +0.4 ) = 1.79
@@ -80,22 +89,29 @@ il vaut mieux améliorer toutes les sous-système que d'améliorer un seul
     S = 1 / ( (0.2+0.8/24) *0.6 + (0.1 + 0.9/24)*0.4 ) = 5.13
     E= S/P = 5.13/24 = 0.21 ==> efficacité de 21%
 
-#13. 4 cores  -> 1000/2.70 = 370.3€ par "amélioration"
+# 13.
+    4 cores  -> 1000/2.70 = 370.3€ par "amélioration"
     12 cores -> 2500/4.35 = 574.7€ par "amélioration"
     24 cores -> 6000/5.13 = 1169.6€ par "amélioration"
 
-#14. 
+# 14. 
     Smax = told/tnew = 1000/0.3*1000 = 1/0.3 = 3.33
 
     S= 1/(0.3+0.7/p)
     smax lim p->+infini = 1/(0.3+0.7/p) ==> 1/0.3 = 3.33
 
-#15. 
+# 15. 
     S = told/tnew = tseq/tp = 1000 / ( 300 + 700/p +5*(p-1) )
     Tnew = 5p²+295p+700
 
-#16. 
+# 16. 
     graph
 
-#17. 
+# 17. 
+    S= (1-fp)+s*fp = 1+(s-1)*fp
+    Fs=0.05     S10 = 1 + (10-1)*0.95 = 9.55
+    Fs=0.95     S14 = 1 + (14-1)*0.95 = 13.35
+    p=10    W= W*Fs + W*fp = W*0.05 + W.095
+    p=14    W'= W*Fs + W*fp*p = W*0.05 + W.095*4
+    W'/W = W(0.05+0.95*4) / W(0.05+0.95) = 3.85
 
