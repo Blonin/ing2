@@ -1,6 +1,8 @@
 # Création de la planète
 
-## Nom de la planète :
+## Création des base 
+
+### Nom de la planète :
 
 Faites en sorte qu'il corresponde à l'histoire ou à l'environnement de la planète. Désolous sonne bien pour un monde sinistre (moins en revanche que Bisouland).
 
