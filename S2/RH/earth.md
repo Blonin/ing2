@@ -7,7 +7,7 @@
 
 générateur aléatoire : https://fr.fantasynamegenerators.com/noms-de-plan%C3%A8tes.php
 
-    liste de nom possible :
+- Liste de nom possible :
     Hibbeanov
     Tonvaicury
     Kilvypso
