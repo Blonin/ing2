@@ -38,4 +38,5 @@ negNumEX = 5 + (-4)
 -- :t sqrt nous affiche le manuel haskell de sqrt
 
 num9 = 9 :: Int
+--fromIntegral permet de changer le "changer" le type de la valeur
 sqrtOf9 = sqrt (fromIntegral num9)
