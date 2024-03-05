@@ -1,9 +1,10 @@
-using namespace std;
+#include <iostream>
+#include "Personne.hpp"
 
 //////////////////////////////////////////////////////////////////////////
 // Programme : main.cpp                                                 //
 // Acces     : Public                                                   //
-// But       : Utilisation de la classe Vector                          //
+// But       : Utilisation de la classe Etudiant                        //
 //                                                                      //
 // Arguments                                                            //
 // - IN      : neant                                                    //
@@ -13,14 +14,18 @@ using namespace std;
 //             EXIT_FAILURE Execution KO                                //
 //                                                                      //
 // Historique                       Date        Version  par            //
-// Ajout main.cpp                   25/12/2023  1.0.00   Alain BERTAILS //
+// Ajout main.cpp                   20/02/2024  1.0.00   Alain BERTAILS //
 //////////////////////////////////////////////////////////////////////////
 
-#include <cmath>
-#include "Vector.hpp"
-
-int main(void)
+int main()
 {
-  // TODO
-	return EXIT_SUCCESS;
-)
+  Etudiant Alain("0001","BERTAILS","Alain");
+  Alain.Afficher();
+
+  Personne *p = new Etudiant("0002","Alain","TERRIEUR");
+  // Répondre au question dans le commentaire de vos codes
+  p->Afficher(); // Méthode de Personne ?
+                 // de Etudiant ?
+
+  return EXIT_SUCCESS;
+}

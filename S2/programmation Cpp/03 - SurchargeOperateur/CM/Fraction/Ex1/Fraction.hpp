@@ -37,6 +37,7 @@ class Fraction
     // C’est une fonction AMIE, pas une methode membre
     friend std::ostream&operator << (std::ostream&out,const Fraction &f);
     void operator*=(const Fraction& autre);
+    
 };
 
 #endif

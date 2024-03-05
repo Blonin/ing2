@@ -1,9 +1,12 @@
 using namespace std;
 
+#include <iostream>
+#include "Polygon.hpp"
+
 //////////////////////////////////////////////////////////////////////////
 // Programme : main.cpp                                                 //
 // Acces     : Public                                                   //
-// But       : Utilisation de la classe Vector                          //
+// But       : Utilisation de la classe Etudiant                        //
 //                                                                      //
 // Arguments                                                            //
 // - IN      : neant                                                    //
@@ -13,14 +16,16 @@ using namespace std;
 //             EXIT_FAILURE Execution KO                                //
 //                                                                      //
 // Historique                       Date        Version  par            //
-// Ajout main.cpp                   25/12/2023  1.0.00   Alain BERTAILS //
+// Ajout main.cpp                   20/02/2024  1.0.00   Alain BERTAILS //
 //////////////////////////////////////////////////////////////////////////
 
-#include <cmath>
-#include "Vector.hpp"
-
-int main(void)
+int main()
 {
-  // TODO
-	return EXIT_SUCCESS;
-)
+  Rectangle rect(5, 3);
+  std::cout << 'Aire du rectangle : ' << rect.GetArea() << std::endl;
+
+  Triangle tri(4, 6);
+  std::cout << 'Aire du triangle : ' << tri.getArea() << std::endl;
+
+  return EXIT_SUCCESS;
+}

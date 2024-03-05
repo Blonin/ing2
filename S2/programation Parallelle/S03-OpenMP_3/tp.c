@@ -70,6 +70,8 @@ int main(int argc, char **argv)
  {
    degree[G->list_of_edges[i].vertex1]++;
    degree[G->list_of_edges[i].vertex2]++;
+
+   
  }
  
 
