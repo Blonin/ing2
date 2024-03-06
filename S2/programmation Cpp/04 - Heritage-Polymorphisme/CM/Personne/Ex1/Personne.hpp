@@ -47,7 +47,7 @@ public:
     void afficher () const {cout << nom << prenom << endl;}
 
     //destructeur
-    ~Personne();
+    ~Personne() {};
 };
 
 
@@ -75,7 +75,7 @@ public:
         id(id){}
     
     //destructeur
-    ~Etudiant();
+    ~Etudiant(){};
 };
 
 

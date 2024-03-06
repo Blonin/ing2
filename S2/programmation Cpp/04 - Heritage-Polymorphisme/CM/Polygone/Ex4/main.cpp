@@ -22,10 +22,10 @@ using namespace std;
 int main()
 {
   Rectangle rect(5, 3);
-  std::cout << 'Aire du rectangle : ' << rect.GetArea() << std::endl;
+  cout << "Aire du rectangle :"  << rect.getArea() << endl;
 
   Triangle tri(4, 6);
-  std::cout << 'Aire du triangle : ' << tri.getArea() << std::endl;
+  cout << "Aire du triangle : " << tri.getArea() << endl;
 
   return EXIT_SUCCESS;
 }

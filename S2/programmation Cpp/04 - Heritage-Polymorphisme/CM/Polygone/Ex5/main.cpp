@@ -1,7 +1,7 @@
 using namespace std;
 
 #include <iostream>
-#include "Polygon.hpp"
+#include "../Ex4/Polygon.hpp"
 
 //////////////////////////////////////////////////////////////////////////
 // Programme : main.cpp                                                 //
@@ -22,10 +22,12 @@ using namespace std;
 int main()
 {
   vector <const Polygon  *>  vp ;
+  Polygon *p1 = new Rectangle(4,5);
+  Polygon *p2 = new Triangle(4,5);
 
   // Ici le code a ajouter
 
-  // n’oubliez pas delete !
+  // nï¿½oubliez pas delete !
 
   return EXIT_SUCCESS;
 }
