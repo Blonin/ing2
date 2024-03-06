@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Personne.hpp"
+#include "../Ex1/Personne.hpp"
 
 //////////////////////////////////////////////////////////////////////////
 // Programme : main.cpp                                                 //
@@ -20,11 +20,11 @@
 int main()
 {
   Etudiant Alain("0001","BERTAILS","Alain");
-  Alain.Afficher();
+  Alain.afficher();
 
   Personne *p = new Etudiant("0002","Alain","TERRIEUR");
-  // Répondre au question dans le commentaire de vos codes
-  p->Afficher(); // Méthode de Personne ?
+  // Rï¿½pondre au question dans le commentaire de vos codes
+  p->afficher(); // Mï¿½thode de Personne ?
                  // de Etudiant ?
 
   return EXIT_SUCCESS;

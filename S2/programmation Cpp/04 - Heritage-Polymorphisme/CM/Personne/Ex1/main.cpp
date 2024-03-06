@@ -1,3 +1,20 @@
+/**
+ * @ name: fileName
+ * @ access: public
+ * @ Path: filePath
+ * @ Author: Richter Gustave
+ * @ Create Time: 05-03-2024
+ * @ email: richtergustave@gmail.com
+ * @ description:
+ * @ argument: NULL
+ * @ input: NULL
+ * @ output: NULL
+ * @ return: NULL
+ * @ copyright: Richter Gustave
+ * @ Modified by: Name
+ * @ Modified time: 06-03-2024
+ */
+
 #include <iostream>
 #include "Personne.hpp"
 
@@ -18,7 +35,8 @@
 //////////////////////////////////////////////////////////////////////////
 
 int main()
-{ Etudiant Alain("BERTAILS");
-  Alain.Afficher();
+{ 
+  Etudiant Alain("BERTAILS","Alain");
+  Alain.afficher();
   return EXIT_SUCCESS;
 }
