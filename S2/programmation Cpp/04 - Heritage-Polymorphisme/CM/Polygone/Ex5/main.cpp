@@ -1,7 +1,3 @@
-using namespace std;
-
-#include <iostream>
-#include "../Ex4/Polygon.hpp"
 
 //////////////////////////////////////////////////////////////////////////
 // Programme : main.cpp                                                 //
@@ -19,15 +15,28 @@ using namespace std;
 // Ajout main.cpp                   20/02/2024  1.0.00   Alain BERTAILS //
 //////////////////////////////////////////////////////////////////////////
 
-int main()
-{
+using namespace std;
+
+#include <iostream>
+#include <vector>
+#include "Polygon.hpp"
+
+int main(){
   vector <const Polygon  *>  vp ;
   Polygon *p1 = new Rectangle(4,5);
   Polygon *p2 = new Triangle(4,5);
-
-  // Ici le code a ajouter
-
+  vp.push_back(p1);
+  vp.push_back(p2);
   // n�oubliez pas delete !
+  for (auto p : vp)
+  {
+    cout<< p->getArea() <<endl;
+  }
+  for (auto p : vp)
+  {
+    delete p;
+  }
+  
 
   return EXIT_SUCCESS;
 }

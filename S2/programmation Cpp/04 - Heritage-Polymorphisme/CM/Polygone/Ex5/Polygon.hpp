@@ -18,8 +18,6 @@ public:
     void setWidth(const int width){this->width=width;}
     void setHeight(const int height){this->height=height;}
 
-
-
     virtual int getArea(){return 0;}
 
     //destructeur
@@ -42,7 +40,7 @@ public:
 };
 
 
-class Triangle : Polygon
+class Triangle : public Polygon
 {
 private:
     
