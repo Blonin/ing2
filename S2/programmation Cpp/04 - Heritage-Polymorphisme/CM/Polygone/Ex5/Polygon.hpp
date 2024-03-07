@@ -3,6 +3,11 @@
 #ifndef __POLYGON_HPP__
 #define __POLYGON_HPP__
 
+using namespace std;
+
+#include <iostream>
+#include <vector>
+
 class Polygon
 {
 protected:
@@ -18,10 +23,12 @@ public:
     void setWidth(const int width){this->width=width;}
     void setHeight(const int height){this->height=height;}
 
-    virtual int getArea(){return 0;}
+    virtual int getArea()const {return 0;}
 
     //destructeur
-    ~Polygon(){};
+    ~Polygon(){
+        cout << "deleting Polygon" << endl;
+    }
 };
 
 
@@ -33,9 +40,11 @@ public:
     Rectangle(const int width, const int height) : Polygon(width,height){};
     
     //override
-    int getArea() override{return width*height;}
+    int getArea()const override{return width*height;}
 
-    ~Rectangle(){};
+    ~Rectangle() {
+        cout << "deleting Rectangle" << endl;
+    }
     
 };
 
@@ -47,9 +56,11 @@ private:
 public:
     Triangle(const int width, const int height) : Polygon(width,height){};
 
-    int getArea() override{return width*height/2;}
+    int getArea()const override{return width*height/2;}
 
-    ~Triangle(){};
+    ~Triangle() {
+        cout << "deleting Triangle" << endl;
+    }
 };
 
 #endif
