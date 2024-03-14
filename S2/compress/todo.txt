@@ -1,0 +1,14 @@
+FINIR LZ - MAXIME ==> LZ78 : gerer le fait que le premier caractere soit indexé zero pour la compression ==> idee : ne pas compter le premier caractere dans le dictionnaire,
+                    mais rajouter sa deuxieme occurence dans le dictionnaire pour etre sur d eviter les conflits de position, notamment sur la decompression 
+
+STATISTIC _______
+                |__ HUFFMAN ----------Capdeville
+                |
+                |__ SHANNON-FANO -----Capdeville
+                |
+                |__ SOURCE -----------Gustave
+                |
+                |__ ENCODING TREE ----Ugo
+
+RLE ---------------------------------- Raph
+
