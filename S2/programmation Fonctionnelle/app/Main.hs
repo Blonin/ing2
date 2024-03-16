@@ -40,3 +40,7 @@ negNumEX = 5 + (-4)
 num9 = 9 :: Int
 --fromIntegral permet de changer le "changer" le type de la valeur
 sqrtOf9 = sqrt (fromIntegral num9)
+
+--list
+primeNum = [3.5.7.11]
+morePrime =primeNum ++ [13]

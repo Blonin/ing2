@@ -15,11 +15,15 @@
 // Ajout main.cpp                   20/02/2024  1.0.00   Alain BERTAILS //
 //////////////////////////////////////////////////////////////////////////
 
+using namespace std;
+
+#include <iostream>
+#include <vector>
 
 #include "Polygon.hpp"
 
 int main(){
-  vector < Polygon  *>  vp ;
+  vector <const Polygon  *>  vp ;
   Polygon *p1 = new Rectangle(4,5);
   Polygon *p2 = new Triangle(4,5);
   vp.push_back(p1);
