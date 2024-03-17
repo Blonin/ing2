@@ -3,10 +3,10 @@
 #ifndef __POLYGON_HPP__
 #define __POLYGON_HPP__
 
-using namespace std;
-
 #include <iostream>
 #include <vector>
+using namespace std;
+#include <iostream>
 
 class Polygon
 {
@@ -20,8 +20,12 @@ public:
 
     int getWidth(){return width;}
     int getHeight(){return height;}
-    void setWidth(const int width){this->width=width;}
-    void setHeight(const int height){this->height=height;}
+    void setWidth(const int width){
+        this->width=width;
+        }
+    void setHeight(const int height){
+        this->height=height;
+        }
 
     virtual int getArea()const {return 0;}
 
