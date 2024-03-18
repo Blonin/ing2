@@ -1,5 +1,5 @@
-#ifndef GUIRLANDE_HPP
-#define GUIRLANDE_HPP
+#ifndef __GUIRLANDE_HPP__
+#define __GUIRLANDE_HPP__
 
 #include "Light.hpp"
 #include "Electrique.hpp"
@@ -17,12 +17,10 @@ public:
     float puissance() const override;
 
     void afficher() const;
-    void allumer();
+    void toggle();
+    void alternate();
     void eteindre();
-    ~Guirlande()
-    {
-        cout << "Deleting Guirland" << endl;
-    };
+    ~Guirlande(){}
 };
 
 Guirlande::Guirlande(vector<Light> lights):Electrique(200,0){
@@ -33,15 +31,21 @@ Guirlande::Guirlande(vector<Light> lights):Electrique(200,0){
     }
 }
 
-void Guirlande :: allumer(){
+void Guirlande :: toggle(){
     for (Light &light :lights){
-        light.setIntensite(0.1);
+        light.toggle();
     }
 }
-
+/*
 void Guirlande :: eteindre(){
     for (Light &light :lights){
-        light.setIntensite(0);
+        light.toggle(false);
+    }
+}
+*/
+void Guirlande :: alternate(){
+    for (Light &light :lights){
+        light.toggle();
     }
 }
 

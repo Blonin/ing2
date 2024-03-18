@@ -1,2 +1,0 @@
-Bit.hs
-Dictionaries.hs

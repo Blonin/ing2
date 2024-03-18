@@ -12,7 +12,7 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 17-03-2024
+ * @ Modified time: 18-03-2024
  */
 
 #ifndef __ELECTRIQUE_HPP__
@@ -30,9 +30,7 @@ public:
     virtual float puissance() const =0;
     void afficher() const;
 
-    ~Electrique(){
-        cout << "deleting Electrique" << endl;
-    };
+    ~Electrique(){}
 };
 
 Electrique::Electrique(float tension, float intensite){

@@ -29,23 +29,30 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    Light *l1 = new Light(0.05);
-    Light *l2= new Light(0.1);
+    Light l1(0);
+    Light l2(0.05);
+    Light l3(0);
+    Light l4(0.05);
+    Light l5(0);
 
-    vector<Light> l = {l1,l2};
+    vector<Light> l = {l1,l2,l3,l4,l5};
     Guirlande guirlande(l);
 
     guirlande.afficher();
     cout << "puissance de la guirlande : " << guirlande.puissance() << endl;
     
-    guirlande.allumer();
+    guirlande.alternate();
     guirlande.afficher();
     cout << "puissance de la guirlande : " << guirlande.puissance() <<endl;
 
-    guirlande.eteindre();
+    guirlande.toggle();
+    guirlande.afficher();
+    cout << "puissance de la guirlande : " << guirlande.puissance() <<endl;
+
+
+   // guirlande.eteindre();
     guirlande.afficher();
 
-    delete l1;
-    delete l2;
+
     return 0;
 }
