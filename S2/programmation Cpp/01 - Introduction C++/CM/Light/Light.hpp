@@ -21,7 +21,7 @@
 using namespace std;
 #include <iostream>
 
-class Light : public Electrique
+class Light
 { 
   private:
 

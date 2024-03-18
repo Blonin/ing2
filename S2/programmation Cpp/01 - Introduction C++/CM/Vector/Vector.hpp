@@ -12,12 +12,14 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 18-03-2024
+ * @ Modified time: 19-03-2024
  */
 
 #ifndef __VECTOR_HPP__
 #define __VECTOR_HPP__
-#include <stdexcept>
+
+#include <iostream>
+using namespace std;
 
 class Vector
 {
@@ -47,9 +49,10 @@ unsigned int Vector::size() const {
 }
 
 double& Vector::operator[](unsigned int i ){
-    if (i<0 || i>size())
+    if (i>=sz || i<0)
     {
-        throw out_of_range("Index invalide : " + to_string(i));
+        cerr<<"Array index out of bounds"<<endl;
+        exit(-1);
     }
     
     return elements[i];
