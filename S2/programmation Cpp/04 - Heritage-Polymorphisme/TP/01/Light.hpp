@@ -14,10 +14,10 @@ class Light : public Electrique
     bool on;
     
   public:  
-    Light (float intensite = 0,bool on=false);  // Makes a new light
+    Light (float intensite,bool on);  // Makes a new light
 
     void toggle();
-    bool isOn();
+    bool isOn() const;
 
     float puissance() const override;
     void afficher() const;
@@ -28,19 +28,25 @@ class Light : public Electrique
 
 };
 
-Light::Light(float intensite,bool on) : Electrique(220, intensite) {}
+Light::Light(float intensite,bool on) : Electrique(220, intensite) {
+    on = on;
+} 
 
 float Light::puissance() const {
     return tension * intensite;
 }
 
 void Light::afficher() const {
-    if (intensite == 0) {
-        cout << ".";
-    }else if(intensite <0.1){
+    if (isOn()==true)
+    {
+        if(intensite <0.1){
         cout << "o";
-    } else {
-        cout << "O";
+        } else {
+            cout << "O";
+        }
+    }else
+    {
+        cout<<".";
     }
 }
 
@@ -57,5 +63,8 @@ void Light::setIntensite(float intensite) {
     this->intensite = intensite;
 }
 
+bool Light::isOn() const{
+    return on;
+}
 
 #endif

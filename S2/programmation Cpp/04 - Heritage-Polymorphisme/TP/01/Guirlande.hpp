@@ -36,7 +36,7 @@ void Guirlande :: toggle(){
         light.toggle();
     }
 }
-/*
+/* fonction pour tout eteindre ne fonctionne pas
 void Guirlande :: eteindre(){
     for (Light &light :lights){
         light.toggle(false);

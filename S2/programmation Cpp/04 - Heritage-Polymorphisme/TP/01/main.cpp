@@ -29,11 +29,11 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    Light l1(0);
-    Light l2(0.05);
-    Light l3(0);
-    Light l4(0.05);
-    Light l5(0);
+    Light l1(0.1,false);
+    Light l2(0.05,true);
+    Light l3(0.1,false);
+    Light l4(0.05,true);
+    Light l5(0.1,false);
 
     vector<Light> l = {l1,l2,l3,l4,l5};
     Guirlande guirlande(l);
