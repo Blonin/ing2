@@ -19,8 +19,15 @@ using namespace std;
 #include <cmath>
 #include "Vector.hpp"
 
+inline double sum_sqrt(Vector& v)
+{
+	double sum = 0;
+  // TODO
+	return(sum);
+}
+
 int main(void)
 {
   // TODO
 	return EXIT_SUCCESS;
-)
+}

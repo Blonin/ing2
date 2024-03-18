@@ -1,19 +1,51 @@
+/**
+ * @ name: fileName
+ * @ access: public
+ * @ Path: filePath
+ * @ Author: Richter Gustave
+ * @ Create Time: 18-03-2024 23:20:32
+ * @ email: richtergustave@gmail.com
+ * @ description:
+ * @ argument: NULL
+ * @ input: NULL
+ * @ output: NULL
+ * @ return: NULL
+ * @ copyright: Richter Gustave
+ * @ Modified by: Name
+ * @ Modified time: 18-03-2024
+ */
+
 #ifndef __LIGHT_HPP__
 #define __LIGHT_HPP__
 
-class Light 
+using namespace std;
+#include <iostream>
+
+class Light
 { 
   private:
-    bool on ;      // A light witch may be on or off.
 
   protected:
-
+    bool on;
+    
   public:  
-    Light ();      // Makes a new light
-    ~Light();
+    Light ();  // Makes a new light
 
-    void toggle(); // If light is on turn it off , if off turn it on
-    bool isOn();   // is the light on ?
+    void toggle();
+    bool isOn() const;
+    ~Light(){}
 };
+
+Light::Light(){
+    on = false;
+} 
+
+void Light::toggle() {
+    on = !on;
+}
+
+bool Light::isOn() const{
+    return on;
+}
 
 #endif

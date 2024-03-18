@@ -3,7 +3,7 @@
  * @ access: public
  * @ Path: filePath
  * @ Author: Richter Gustave
- * @ Create Time: 05-03-2024 15:13:30
+ * @ Create Time: 18-03-2024 23:55:41
  * @ email: richtergustave@gmail.com
  * @ description:
  * @ argument: NULL
@@ -16,31 +16,17 @@
  */
 
 using namespace std;
+
 #include <iostream>
-#define N 40
-
-void sum(int* p, int n, int d[]){
-    *p=0;
-    for (int i = 0; i < n; ++i)
-    {
-        *p += d[i];
-    }
-    
-}
-
+#include "light.hpp"
 
 int main(int argc, char const *argv[])
 {
+  Light Ampoule;
 
-    int data [N];
-    for (int i = 0; i < N; ++i)
-    {
-        data[i] = i;
-    }
+  cout << Ampoule.isOn() << endl;
+  Ampoule.toggle();
+  cout << Ampoule.isOn() << endl;
 
-    int accum = 0;
-    sum(&accum,N,data);
-    cout << "Sume is : "<< accum << endl;
-    
-    return 0;
+  return EXIT_SUCCESS;  
 }
