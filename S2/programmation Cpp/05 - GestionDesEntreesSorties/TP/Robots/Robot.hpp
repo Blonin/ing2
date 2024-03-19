@@ -25,8 +25,8 @@
 class Robot
 {
 protected:
-    int type;
-    std::string word;
+    std::string type;
+    std::string name;
     int prix;
 
 public:
