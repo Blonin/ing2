@@ -12,12 +12,13 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 13-02-2024
+ * @ Modified time: 19-03-2024
  */
 
 using namespace std;
 
 #include <iostream>
+#include <fstream>
 #include "Fraction.hpp"
 
 void Fraction::operator*=(const Fraction& autre){
@@ -30,7 +31,7 @@ int main()
 {
   Fraction f1(4,5);
   Fraction f2(3,11);
-
+  
   f1 *= f2;
   cout << f1;
 
