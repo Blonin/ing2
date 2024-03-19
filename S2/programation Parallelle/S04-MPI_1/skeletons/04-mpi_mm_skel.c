@@ -40,7 +40,7 @@ int	numtasks,              /* number of tasks in partition */
  double **a,                   /* matrix A[NRA][NCA] to be multiplied */
         **b,                   /* matrix B[NCA][NCB] to be multiplied */
         **c,                   /* result matrix C[NRA][NCB] */
-	aval,bval,cval,        /* init values for each matrix */
+		aval,bval,cval,        /* init values for each matrix */
         err, errsq;            /* error and square error of the matrix product */
 
 MPI_Status status;
@@ -59,9 +59,9 @@ numworkers = numtasks-1;
 /**************************** master task ************************************/
    if (taskid == MASTER)
    {
-      printf("mpi_mm has started with %d tasks.\n",numtasks);
+      	printf("mpi_mm has started with %d tasks.\n",numtasks);
 
-	   a = (double**)malloc(NRA*sizeof(double*));
+	   	a = (double**)malloc(NRA*sizeof(double*));
 		double *ta = (double *)malloc(NRA * NCA * sizeof(double));	
 
 		for (i=0;i<NRA;i++)
@@ -69,7 +69,7 @@ numworkers = numtasks-1;
 			a[i] = &(ta[i*NCA]);
 		}
 
-	   b = (double**)malloc(NCA*sizeof(double*));	
+	   	b = (double**)malloc(NCA*sizeof(double*));	
 		double *tb = (double *)malloc(NCA * NCB * sizeof(double));	
 
 		for (i=0;i<NCA;i++)
@@ -77,37 +77,37 @@ numworkers = numtasks-1;
 			b[i] = &(tb[i*NCB]);
 		}
 
-      aval = 3.0;
-      bval = 2.0;
+		aval = 3.0;
+		bval = 2.0;
 
       for (i=0; i<NRA; i++)
-         for (j=0; j<NCA; j++)
-	    a[i][j]= aval;
+        for (j=0; j<NCA; j++)
+	    	a[i][j]= aval;
 
       for (i=0; i<NCA; i++)
          for (j=0; j<NCB; j++)
             b[i][j]= bval;
 
 
-      /* Send matrix data to the worker tasks: */
+		/* Send matrix data to the worker tasks: */
 
-	/* 1. Calculate how many rows per worker */
-	/* 2. For each worker, send:
-		 offset, 
-		 number of rows, 
-		 chunk of a of size "number of rows", 
-		 a whole copy of b
-	*/ 
-	rows=NRA/numworkers;
-	
-	for ( dest = 0; dest < numworkers; dest++)
-	{
-		MPI_Send(&offset, sizeof(int), MPI_INT, dest, 0, MPI_COMM_WORLD)
-		MPI_Send(&rows, sizeof(int), MPI_INT, dest, 0, MPI_COMM_WORLD)
-		MPI_Send(&(a[offset][0]), rows*NCA, MPI_CHAR, dest, 0, MPI_COMM_WORLD); //l'adresse de l'offset 
-		MPI_Send(&(b[0][0]), NCA*NCB, MPI_CHAR, dest, 0, MPI_COMM_WORLD);
-		offset+=rows;
-	}
+		/* 1. Calculate how many rows per worker */
+		/* 2. For each worker, send:
+			offset, 
+			number of rows, 
+			chunk of a of size "number of rows", 
+			a whole copy of b
+		*/ 
+		rows=NRA/numworkers;
+		
+		for ( dest = 0; dest < numworkers; dest++)
+		{
+			MPI_Send(&offset, sizeof(int), MPI_INT, dest, 0, MPI_COMM_WORLD)
+			MPI_Send(&rows, sizeof(int), MPI_INT, dest, 0, MPI_COMM_WORLD)
+			MPI_Send(&(a[offset][0]), rows*NCA, MPI_CHAR, dest, 0, MPI_COMM_WORLD); //l'adresse de l'offset 
+			MPI_Send(&(b[0][0]), NCA*NCB, MPI_CHAR, dest, 0, MPI_COMM_WORLD);
+			offset+=rows;
+		}
 	
 
       mtype = FROM_MASTER;
@@ -123,47 +123,45 @@ numworkers = numtasks-1;
 			c[i] = &(tc[i*NCB]);
 		}
 
-	/* Receive from each worker:
-		offset,
-		number of rows to receive,
-		chunk of c of size "rows to receive",
-	*/
+		/* Receive from each worker:
+			offset,
+			number of rows to receive,
+			chunk of c of size "rows to receive",
+		*/
 
-	for ( dest = 0; dest < numworkers; dest++)
-	{
-		MPI_Recv(&offset, )
-	}
+		for ( dest = 0; dest < numworkers; dest++)
+		{
+			MPI_Recv(&offset, )
+		}
 	
+		/* Print results */
+		printf("******************************************************\n");
+		printf("Result Matrix:\n");
+		for (i=0; i<NRA; i++)
+		{
+			printf("\n"); 
+			for (j=0; j<NCB; j++) 
+				printf("%6.2f   ", c[i][j]);
+		}
+		printf("\n******************************************************\n");
+		printf ("Done.\n");
+
+		/* Check results */
+		cval = aval*bval*(double)NCA;	
+		errsq = 0.0; 
+		for (i=0; i<NRA; i++)
+			for (j=0; j<NCB; j++){
+			err = c[i][j] - cval; 
+			errsq += err * err;
+		}
+		
+		if (errsq > TOL) 
+			printf("\n Errors in multiplication: %f\n",errsq);
+		else
+			printf("\n The result is correct\n");
 
 
-      /* Print results */
-      printf("******************************************************\n");
-      printf("Result Matrix:\n");
-      for (i=0; i<NRA; i++)
-      {
-         printf("\n"); 
-         for (j=0; j<NCB; j++) 
-            printf("%6.2f   ", c[i][j]);
-      }
-      printf("\n******************************************************\n");
-      printf ("Done.\n");
-
-      /* Check results */
-	cval = aval*bval*(double)NCA;	
-	errsq = 0.0; 
-	for (i=0; i<NRA; i++)
-       	  for (j=0; j<NCB; j++){
-	    err = c[i][j] - cval; 
-	    errsq += err * err;
-	  }
-	
-	if (errsq > TOL) 
-		printf("\n Errors in multiplication: %f\n",errsq);
-	else
-		printf("\n The result is correct\n");
-
-
-   }
+  	}
 
 
 /**************************** worker task ************************************/

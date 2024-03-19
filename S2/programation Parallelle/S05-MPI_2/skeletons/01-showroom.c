@@ -20,7 +20,7 @@ int main(int argc , char *argv [])
    MPI_Init(&argc, &argv);
    MPI_Comm_rank(MPI_COMM_WORLD, &myid);  
    MPI_Comm_size(MPI_COMM_WORLD, &np);
-/*
+
    // Broadcast 
    if (myid == 0) {
 	   printf("\n========================================\n");
@@ -30,16 +30,16 @@ int main(int argc , char *argv [])
    MPI_Barrier(MPI_COMM_WORLD);
 
    if (myid == 0) 
-	strcpy(message, "Hello!"); 
+	   strcpy(message, "Hello!"); 
    else  
-	strcpy(message, "IamEmpty");
+	   strcpy(message, "IamEmpty");
 
    printf("Before broadcast -- I am rank %d. message: %s\n",myid,message);
    // si je suis le 0 je fais le broadcast les autres enregistre le message dans la var message
    MPI_Bcast(message, SIZE, MPI_CHAR, 0,MPI_COMM_WORLD);
    MPI_Barrier(MPI_COMM_WORLD);
    printf("After broadcast -- I am rank %d. message: %s\n",myid,message);
-*/
+
    // Scatter 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
@@ -62,6 +62,7 @@ int main(int argc , char *argv [])
    printf("\n");
 
    elements_per_proc = 2;
+   // le 0 fais le scatter il envoie deux elements par deux 
    MPI_Scatter(ids,elements_per_proc,MPI_INT,rxids,elements_per_proc,MPI_INT,0,MPI_COMM_WORLD);
 
    MPI_Barrier(MPI_COMM_WORLD);
@@ -69,7 +70,7 @@ int main(int argc , char *argv [])
    for (i=0; i<SIZE; i++) printf("%d, ",rxids[i]);
    printf("\n");
 
-/*
+
    // Gather 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
@@ -166,7 +167,7 @@ int main(int argc , char *argv [])
    for (i=0; i<SIZE; i++) printf("%d, ",ids[i]);
    printf("\n");
    }
-*/
+
    MPI_Finalize();
    return 0;
 }
