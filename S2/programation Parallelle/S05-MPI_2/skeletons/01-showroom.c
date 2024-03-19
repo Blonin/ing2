@@ -20,8 +20,8 @@ int main(int argc , char *argv [])
    MPI_Init(&argc, &argv);
    MPI_Comm_rank(MPI_COMM_WORLD, &myid);  
    MPI_Comm_size(MPI_COMM_WORLD, &np);
-
-   /** Broadcast **/
+/*
+   // Broadcast 
    if (myid == 0) {
 	   printf("\n========================================\n");
 	   printf(" Starting MPI_Bcast...");
@@ -35,11 +35,12 @@ int main(int argc , char *argv [])
 	strcpy(message, "IamEmpty");
 
    printf("Before broadcast -- I am rank %d. message: %s\n",myid,message);
+   // si je suis le 0 je fais le broadcast les autres enregistre le message dans la var message
    MPI_Bcast(message, SIZE, MPI_CHAR, 0,MPI_COMM_WORLD);
    MPI_Barrier(MPI_COMM_WORLD);
    printf("After broadcast -- I am rank %d. message: %s\n",myid,message);
-
-   /** Scatter **/
+*/
+   // Scatter 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
 	   printf("\nPress any key to continue to MPI_Scatter\n");
@@ -68,8 +69,8 @@ int main(int argc , char *argv [])
    for (i=0; i<SIZE; i++) printf("%d, ",rxids[i]);
    printf("\n");
 
-
-   /** Gather **/
+/*
+   // Gather 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
 	   printf("\nPress any key to continue to MPI_Gather\n");
@@ -92,7 +93,7 @@ int main(int argc , char *argv [])
 
 
 
-   /** Allgather **/
+   // Allgather 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
 	   printf("\nPress any key to continue to MPI_Allgather\n");
@@ -110,7 +111,7 @@ int main(int argc , char *argv [])
    printf("\n");
 
   
- /** Alltoall **/
+ // Alltoall 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
 	   printf("\nPress any key to continue to MPI_Alltoall\n");
@@ -138,7 +139,7 @@ int main(int argc , char *argv [])
 
 
 
-   /** Reduce **/
+   // Reduce 
    MPI_Barrier(MPI_COMM_WORLD); 
    if (myid == 0) {
 	   printf("\nPress any key to continue to MPI_Reduce\n");
@@ -165,7 +166,7 @@ int main(int argc , char *argv [])
    for (i=0; i<SIZE; i++) printf("%d, ",ids[i]);
    printf("\n");
    }
-
+*/
    MPI_Finalize();
    return 0;
 }
