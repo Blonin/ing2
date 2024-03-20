@@ -37,7 +37,7 @@ public:
     friend istream& operator>> (istream& in,Robot& r);
 };
 
-Robot::Robot(/* args */)
+Robot::Robot()
 {
 }
 

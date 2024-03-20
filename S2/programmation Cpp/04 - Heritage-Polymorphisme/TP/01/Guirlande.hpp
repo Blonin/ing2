@@ -18,7 +18,7 @@ public:
 
     void afficher() const;
     void toggle();
-    void alternate();
+    void allumer();
     void eteindre();
     ~Guirlande(){}
 };
@@ -36,16 +36,19 @@ void Guirlande :: toggle(){
         light.toggle();
     }
 }
-/* fonction pour tout eteindre ne fonctionne pas
+
+//allume toutes les lumière de la guirlande
+void Guirlande ::allumer(){
+    for (Light &light :lights)
+    {
+        light.toggle(true);
+    }
+}
+
+// Eteint toutes les light de la guirlande
 void Guirlande :: eteindre(){
     for (Light &light :lights){
         light.toggle(false);
-    }
-}
-*/
-void Guirlande :: alternate(){
-    for (Light &light :lights){
-        light.toggle();
     }
 }
 

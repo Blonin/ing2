@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
     guirlande.afficher();
     cout << "puissance de la guirlande : " << guirlande.puissance() << endl;
     
-    guirlande.alternate();
+    guirlande.toggle();
     guirlande.afficher();
     cout << "puissance de la guirlande : " << guirlande.puissance() <<endl;
 

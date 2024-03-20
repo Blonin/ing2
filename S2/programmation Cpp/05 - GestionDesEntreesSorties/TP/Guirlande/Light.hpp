@@ -59,6 +59,7 @@ void Light::toggle(bool t){
     on = t;
 }
 
+
 float Light::getIntensite() const {
     return intensite;
 }
