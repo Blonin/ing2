@@ -8,14 +8,14 @@ les réseaux de neuronnes convolutifs sont plus souvent utilisé dans l'analyse 
 ### (a) Dans le cas d’une décroissance de température géométrique, décrire l’impact de la valeur du paramètre de décroissance 
 
 - Valeur élevée:
-+ Convergence plus rapide.
-+ Risque accru de rester coincé dans un optimum local.
+    + Convergence plus rapide.
+    + Risque accru de rester coincé dans un optimum local.
 
 - Valeur faible:
-+ Convergence plus lente.
-+ Meilleure chance de trouver un optimum global.
+    + Convergence plus lente.
+    + Meilleure chance de trouver un optimum global.
 
-#### (b) Expliquer le principe de l’évaluation de la différence de score entre un candidat et son voisin et l’utilisation du critère de Métropolis
+### (b) Expliquer le principe de l’évaluation de la différence de score entre un candidat et son voisin et l’utilisation du critère de Métropolis
 on analyse les positions du candidat par rapport a celui de son voisin si le voisin a une meilleur positions on l'accepte sinon on le rejete.
 Le critère de metropolis lui permet de temps en temps d'accepter un voisin que l'on aurait rejeté pour possiblement sortir d'un minimas local
 
@@ -111,3 +111,15 @@ Supposons maintenant que les images sont en couleurs (RGB, ce qui est souvent le
 Paramètres = poids + biais
 Pour une couche de convolution de 32 filtres de taille (3.3.3) on a:
 - 32 * 3 * 3 * **3** *  + 32 = 320
+
+# Recuit simulé
+
+## Sujet :
+Dans cet exercice, nous souhaitons résoudre par l’algorithme du recuit simulé une version très simplifié du problème d’affectation de places de parkings. Nous définisons le problème comme suit :
+• Nous avons N véhicules et k places de parkings. Nous supposons que k est strictement supérieure à N.
+• Chaque place de parking Pi est connue par son adresse que nous exprimons par un couple de coordonnées (xi,yi).
+• Chaque véhicule Vj est aussi connu par une adresse (par exemple l’adresse du logement ou du lieu de travail du propriétaire). Notons (zj ,tj ) les coordonnées définissant une telle adresse. Notre objectif est d’affecter à chaque véhicule une place de parking aussi proche que possible de l’adresse qui lui est associée. On appelle affectation un ensemble de N couples {(Pi,Vj )} dans lequel tous les Pi, ainsi que tous les Vj , sont deux à deux différents.
+
+## 1 Donnez le nombre total d’affectations. En déduire qu’il est utile d’utiliser le recuit simulé pour la résolution du problème.
+
+## 2 Donnez une représentation des affectations, une définition du voisinage et la fonction à minimiser.
