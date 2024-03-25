@@ -27,13 +27,14 @@ Graphe représentant la mise en production d'un modèle d'IA avec les étapes et
 
 Matrice de transition:
 
-État actuel | R | L | P | C | T | M
-R |0.1|0.9|	0|	0|	0|	0
-L |0|0|	0.75|	0.2	0.05|	0
-P |0|0|	0|0|	0|	1|
-C |0|0|	0|0.8|	0.2|    0
-T |0|0|	0|0|	0.5|	0.5
-M |0|0|	0|0|	0|	1
+|État actuel    | R     | L     | P     | C     | T     | M     |
+|---------------|-------|-------|-------|-------|-------|-------|
+|R              | 0.1   | 0.9   | 0     | 0     | 0     | 0     |
+|L              | 0     | 0     | 0.75  | 0.2   | 0.05  | 0     |
+|P              | 0     | 0     | 0     | 0     | 0     | 1     |
+|C              | 0     | 0     | 0     | 0.8   | 0.2   | 0     |
+|T              | 0     | 0     | 0     | 0     | 0.5   | 0.5   |
+|M              | 0     | 0     | 0     | 0     | 0     | 1     |
 
 ### 2 Donner trois exemples de suites d’états possibles.
 
