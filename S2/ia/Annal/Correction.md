@@ -45,7 +45,10 @@ Environnement: Déterministe, car la fonction de transition est connue et ne dé
 
 ## 2 Qu’est-ce qu’une stratégie ? Donnez un exemple de stratégie dans ce problème.
 Une stratégie est un plan d'action qui détermine quelle action l'agent doit choisir dans chaque état possible.
-
++ Deterministe
+strat: S -->A
++ probaliste 
+strat: S*A -->S
 Exemple de stratégie:
 
 Si l'agent est en haut à gauche, aller à droite.
@@ -54,10 +57,17 @@ Si l'agent est en bas à gauche, aller en haut.
 Si l'agent est en bas à droite, rester immobile.
 
 ## 3 Quand est-ce qu’une strat ́egie est qualifi ́ee d’optimale?
+Une stratégie optimale est une strategie qui maximise le gain a long terme
 
 ## 4 Pouvez-vous ‘deviner’ dans ce cas la stratégie optimale ? (vous justifierez, bien entendu, votre réponse)
+S(0.0) haut
+S(0.1) droite
+S(1.1) droite
+S(2.1) droite
+S(3.1) bas
 
 ## 5 Quel algorithme, et de quelle manière, peut trouver cette stratégie ?
+
 
 # Deep learning
 
