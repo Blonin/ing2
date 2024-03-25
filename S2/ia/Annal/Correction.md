@@ -88,22 +88,25 @@ Flatten : permet d'applatir un tenseur en vecteur pour passer en entrée d'un r�
 ## 4 Quels sont le nombre de neurones, le nombre de paramètres et la fonction d’activation de la couche de sortie dans les cas suivants (vous justifierez, bien entendu, vos réponses) :
 
 ### (a) Chaque image contient obligatoirement soit un chien soit un chat (mais pas les deux).
-+ 1 neurone car classification binaire 
-nombre de params: 15 * 15 * 23 + 1
-fonction d'activation : Sigmoïde
+- 1 neurone car classification binaire 
+- nombre de params: 15 * 15 * 23 + 1
+- fonction d'activation : Sigmoïde
 
 ### (b) Nous avons un troisième type d’images ne contenant ni un chat ni un chien.
 - 3 neurone car 3 classes
-nombre de params : 3 * 15 * 15 * 32 + 3
-fonction d'activation : softmax
+- nombre de params : 3 * 15 * 15 * 32 + 3
+- fonction d'activation : softmax
 
 ### (c) Chaque image contient obligatoirement un chien ou un chat (ou les deux). 
-+ 2 neuronnes car 2 classes qui ne s'excluent pas
-nombre de params : 2 * 15 * 15 * 32 + 2
-fonction d'activation : sigmoïde
+- 2 neuronnes car 2 classes qui ne s'excluent pas
+- nombre de params : 2 * 15 * 15 * 32 + 2
+- fonction d'activation : sigmoïde
 
 ## Sujet : 
 Supposons maintenant que les images sont en couleurs (RGB, ce qui est souvent le cas dans les probl`emes r ́eels). Chaque pixel est donc d ́efini par un triplet de réels.
 
 ## 5 Qu’est-ce que cela change dans l’architecture du réseau ?
 
+Paramètres = poids + biais
+Pour une couche de convolution de 32 filtres de taille (3.3.3) on a:
+- 32 * 3 * 3 * **3** *  + 32 = 320
