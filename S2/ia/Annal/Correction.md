@@ -33,12 +33,12 @@ ETATS : s= {16 états désignées par des coord(xi,yi) ; 0<= xi <=3 et 0<= y <=3
 Action: Déplacement de l'agent dans l'une des quatre directions A = (haut, bas, gauche, droite) 
 
 
-- Récompense :
+- Récompense
 
-+2 : Si l'agent atteint la case verte
--2 : Si l'agent heurte un obstacle 
--5 : Si l'agent se conduisant vers l'extérieur
-0 : Sinon
+- +2 : Si l'agent atteint la case verte
+- -2 : Si l'agent heurte un obstacle 
+- -5 : Si l'agent se conduisant vers l'extérieur
+- 0 : Sinon
 Fonction de transition: Détermine la probabilité de l'agent d'atteindre un nouvel état en fonction de l'action choisie et de l'état actuel.
 
 Environnement: Déterministe, car la fonction de transition est connue et ne dépend pas d'aléas.
