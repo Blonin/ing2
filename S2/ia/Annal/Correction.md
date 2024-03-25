@@ -1,5 +1,6 @@
 # Question de cours
-## 1 énumérez les différences les plus importantes entre les réseaux de neurones standards et les réseaux de neurones convolutifs
+
+## 1 énumérez les différences les plus importantes entre les réseaux de neurones standards et les réseaux de neurones convolutifs
 
 les réseaux de neuronnes convolutifs sont plus souvent utilisé dans l'analyse d'image puisqu'il ne sont pas totalement connecté, ils sont connectés a des zones locales de la couche précédente ce qui leur permet d'apprendre des  motifs locaux
 
@@ -97,7 +98,7 @@ Flatten : permet d'applatir un tenseur en vecteur pour passer en entrée d'un r�
 - nombre de params : 3 * 15 * 15 * 32 + 3
 - fonction d'activation : softmax
 
-### (c) Chaque image contient obligatoirement un chien ou un chat (ou les deux). 
+### (c) Chaque image contient obligatoirement un chien ou un chat (ou les deux). 
 - 2 neuronnes car 2 classes qui ne s'excluent pas
 - nombre de params : 2 * 15 * 15 * 32 + 2
 - fonction d'activation : sigmoïde
