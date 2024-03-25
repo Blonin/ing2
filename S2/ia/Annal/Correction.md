@@ -33,8 +33,7 @@ ETATS : s= {16 états désignées par des coord(xi,yi) ; 0<= xi <=3 et 0<= y <=3
 Action: Déplacement de l'agent dans l'une des quatre directions A = (haut, bas, gauche, droite) 
 
 
-- Récompense
-
+Récompense:
 - +2 : Si l'agent atteint la case verte
 - -2 : Si l'agent heurte un obstacle 
 - -5 : Si l'agent se conduisant vers l'extérieur
@@ -47,10 +46,10 @@ Environnement: Déterministe, car la fonction de transition est connue et ne dé
 Une stratégie est un plan d'action qui détermine quelle action l'agent doit choisir dans chaque état possible.
 + Deterministe
 strat: S -->A
-+ probaliste 
++ Probaliste 
 strat: S*A -->S
-Exemple de stratégie:
 
+Exemple de stratégie:
 Si l'agent est en haut à gauche, aller à droite.
 Si l'agent est en haut à droite, aller en bas.
 Si l'agent est en bas à gauche, aller en haut.
@@ -75,18 +74,35 @@ S(3.1) bas
 Dans cet exercice, nous consid ́erons le probl`eme de la reconnaissance des chiens et des chats sur des images. Nous supposons dans un premier temps que les images sont en niveau de gris (comme celles vues en TD) et qu’elles sont de taille 32 ×32. Nous cr ́eons pour cela un r ́eseau de neurones convolutif (ConvNet) ayant une couche de convolution contenant 32 tableaux de neurones et utilisant des filtres de taille 3 ×3, une couche Maxpooling et une couche Flatten.
 
 ## 1 Calculez le nombre de paramètres de la couche de convolution.
+Paramètres = poids + biais
+Pour une couche de convolution de 32 filtres de taille (3.3) on a:
+- 32*3*3+32=320
 
 ## 2 Rappelez le rôle de la couche de Pooling et donnez sa taille.
+Couche de pooling sous échantillonner les filtres(permet de réduire le nombre de paramètres)
 
 ## 3 Rappelez l’utilité de la couche Flatten et donnez sa taille.
+Flatten : permet d'applatir un tenseur
 
 ## 4 Quels sont le nombre de neurones, le nombre de paramètres et la fonction d’activation de la couche de sortie dans les cas suivants (vous justifierez, bien entendu, vos réponses) :
 
 ### (a) Chaque image contient obligatoirement soit un chien soit un chat (mais pas les deux).
++ 1 neurone car classification binaire 
+nombre de params: 15*15*23+1
+fonction d'activation : Sigmoïde
 
 ### (b) Nous avons un troisième type d’images ne contenant ni un chat ni un chien.
++ 3 neurone car 3 classes
+nombre de params : 3*15*15*32+3
+fonction d'activation : softmax
 
-### (c) Chaque image contient obligatoirement un chien ou un chat (ou les deux). Supposons maintenant que les images sont en couleurs (RGB, ce qui est souvent le cas dans les probl`emes r ́eels). Chaque pixel est donc d ́efini par un triplet de réels.
+### (c) Chaque image contient obligatoirement un chien ou un chat (ou les deux). 
++ 2 neuronnes car 2 classes qui ne s'excluent pas
+nombre de params : 2*15*15*32+2
+fonction d'activation : sigmoïde
+
+## Sujet : 
+Supposons maintenant que les images sont en couleurs (RGB, ce qui est souvent le cas dans les probl`emes r ́eels). Chaque pixel est donc d ́efini par un triplet de réels.
 
 ## 5 Qu’est-ce que cela change dans l’architecture du réseau ?
 
