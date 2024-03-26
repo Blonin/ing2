@@ -24,7 +24,8 @@ Les récompenses associées sont de 10 pour la mise en production, 8 pour une ar
 
 Schéma:
 
-Graphe représentant la mise en production d'un modèle d'IA avec les étapes et les probabilités de transition: [URL non valide supprimée]
+Graphe représentant la mise en production d'un modèle d'IA avec les étapes et les probabilités de transition ; 
+![Schéma](schemaMatrice.jpg "Schéma de la matrice de transition")
 
 Matrice de transition:
 

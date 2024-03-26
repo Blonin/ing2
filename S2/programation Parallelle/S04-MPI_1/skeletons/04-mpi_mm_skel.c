@@ -98,17 +98,19 @@ numworkers = numtasks-1;
 			chunk of a of size "number of rows", 
 			a whole copy of b
 		*/ 
+
+	/* PARTIE RAJOUTER */
 		rows=NRA/numworkers;
 		
 		for ( dest = 0; dest < numworkers; dest++)
 		{
-			MPI_Send(&offset, sizeof(int), MPI_INT, dest, 0, MPI_COMM_WORLD)
-			MPI_Send(&rows, sizeof(int), MPI_INT, dest, 0, MPI_COMM_WORLD)
-			MPI_Send(&(a[offset][0]), rows*NCA, MPI_CHAR, dest, 0, MPI_COMM_WORLD); //l'adresse de l'offset 
-			MPI_Send(&(b[0][0]), NCA*NCB, MPI_CHAR, dest, 0, MPI_COMM_WORLD);
+			MPI_Send(&offset, sizeof(int), MPI_INT, dest, 1, MPI_COMM_WORLD)
+			MPI_Send(&rows, sizeof(int), MPI_INT, dest, 2, MPI_COMM_WORLD)
+			MPI_Send(&(a[offset][0]), rows*NCA, MPI_CHAR, dest, 3, MPI_COMM_WORLD); //l'adresse de l'offset 
+			MPI_Send(&(b[0][0]), NCA*NCB, MPI_CHAR, dest, 4, MPI_COMM_WORLD);
 			offset+=rows;
 		}
-	
+	/*FIN*/
 
       mtype = FROM_MASTER;
 
@@ -169,11 +171,15 @@ numworkers = numtasks-1;
    {
       mtype = FROM_MASTER;
 
-      /* 
-	Receive from master:
-	   offset,
-	   number of rows
-      */ 
+      /*Receive from master:
+	   	offset,
+	   	number of rows*/ 
+	/* PARTIE RAJOUTER */
+		MPI_Status status;
+		int offset,rows;
+		MPI_Recv(&offset,sizeof(int),MPI_INT,0,1,MPI_COMM_WORLD, &status);
+		MPI_Recv(&rows,sizeof(int),MPI_INT,0,2,MPI_COMM_WORLD, &status);
+	/*FIN*/
 
       
        // Allocate space for the chunk of a received and for the whole b matrix
@@ -194,7 +200,11 @@ numworkers = numtasks-1;
 		}
 
 	/* Receive chunk of a and whole b */
-
+	/* PARTIE RAJOUTER */
+		double ** a, **b;
+		MPI_Recv(&(a[offset][0]),sizeof(int),MPI_CHAR,0,3,MPI_COMM_WORLD, &status);
+		MPI_Recv(&(b[0][0]),NCA*NCB,MPI_CHAR,0,4,MPI_COMM_WORLD, &status);
+	/*FIN*/
 
 	// Allocate space for the chunk of c to calculate 
 	   c = (double**)malloc(rows*sizeof(double*));
@@ -206,7 +216,7 @@ numworkers = numtasks-1;
 		}
 
 	/* Calculate the matrix product */
-
+	
 
 	/* Send offset, number of rows and chunk of c to the master*/ 
       mtype = FROM_WORKER;
