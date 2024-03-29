@@ -39,11 +39,11 @@ int main(){
         memset(&action, '\0', sizeof(action));
         action.sa_handler = &deroute_SIGTERM;
         if(sigaction(SIGTERM, &action, NULL) < 0){
-            printf("Erreur sigaction\n");
+            printf("Erreur sigaction Sigterm\n");
         }
         action.sa_handler = &deroute_SIGKILL;
         if(sigaction(SIGKILL, &action, NULL) < 0){
-            printf("Erreur sigaction\n");
+            printf("Erreur sigaction sigkill\n");
         }
         printf("J'attends la terminaison du fils.\n");
         wait(&status);

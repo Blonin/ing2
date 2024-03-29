@@ -52,7 +52,7 @@ if (numtasks < 2 ) {
   printf("Need at least two MPI tasks. Quitting...\n");
   MPI_Abort(MPI_COMM_WORLD, rc);
   exit(1);
-  }
+}
 numworkers = numtasks-1;
 
 
@@ -102,38 +102,27 @@ numworkers = numtasks-1;
 	/* PARTIE RAJOUTER */
 		rows=NRA/numworkers;
 		
-		for ( dest = 0; dest < numworkers; dest++)
+		for ( dest = 1; dest <= numworkers; dest++)
 		{
-			MPI_Send(&offset, sizeof(int), MPI_INT, dest, 1, MPI_COMM_WORLD)
-			MPI_Send(&rows, sizeof(int), MPI_INT, dest, 2, MPI_COMM_WORLD)
+			MPI_Send(&offset, sizeof(int), MPI_INT, dest, 1, MPI_COMM_WORLD);
+			MPI_Send(&rows, sizeof(int), MPI_INT, dest, 2, MPI_COMM_WORLD);
 			MPI_Send(&(a[offset][0]), rows*NCA, MPI_CHAR, dest, 3, MPI_COMM_WORLD); //l'adresse de l'offset 
 			MPI_Send(&(b[0][0]), NCA*NCB, MPI_CHAR, dest, 4, MPI_COMM_WORLD);
 			offset+=rows;
 		}
 	/*FIN*/
 
-      mtype = FROM_MASTER;
+		mtype = FROM_MASTER;
 
-      /* Receive results from worker tasks */
-      mtype = FROM_WORKER;
+		/* Receive results from worker tasks */
+		mtype = FROM_WORKER;
 
-	   c = (double**)malloc(NRA*sizeof(double*));
+	   	c = (double**)malloc(NRA*sizeof(double*));
 		double *tc = (double *)malloc(NRA * NCB * sizeof(double));	
 
 		for (i=0;i<NRA;i++)
 		{
 			c[i] = &(tc[i*NCB]);
-		}
-
-		/* Receive from each worker:
-			offset,
-			number of rows to receive,
-			chunk of c of size "rows to receive",
-		*/
-
-		for ( dest = 0; dest < numworkers; dest++)
-		{
-			MPI_Recv(&offset, )
 		}
 	
 		/* Print results */

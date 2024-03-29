@@ -12,8 +12,9 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 19-03-2024
+ * @ Modified time: 28-03-2024
  */
+
 # include <mpi.h>
 # include <stdio.h>
 # include <string.h>
@@ -37,6 +38,8 @@ int main(int argc, char *argv[])
 
     int ids[SIZE] = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
 
+    char message[SIZE]; 
+    
     double **a,                   /* matrix A[NRA][NCA] to be multiplied */
         **b,                   /* matrix B[NCA][NCB] to be multiplied */
         **c,                   /* result matrix C[NRA][NCB] */
@@ -46,6 +49,12 @@ int main(int argc, char *argv[])
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD,&taskid);  
     MPI_Comm_size(MPI_COMM_WORLD, &numtasks);
+    if (numtasks < 2 ) {
+        printf("Need at least two MPI tasks. Quitting...\n");
+        MPI_Abort(MPI_COMM_WORLD, rc);
+        exit(1);
+    }
+    numworkers = numtasks-1;
 
     if (taskid == MASTER)
     {
@@ -67,7 +76,7 @@ int main(int argc, char *argv[])
         }
 
         aval = 3.0;
-        bval = 2.0;
+        bval = 5.0;
 
         for (i=0; i<SIZE; i++)
             for (j=0; j<SIZE; j++)
@@ -79,30 +88,63 @@ int main(int argc, char *argv[])
     }
     
     
-   // Broadcast 
-   if (taskid == 0) {
+    // Broadcast 
+    if (taskid == 0) {
 	   printf("\n========================================\n");
 	   printf(" Starting MPI_Bcast...");
 	   printf("\n========================================\n");
-   }
-   MPI_Barrier(MPI_COMM_WORLD);
-   printf("Before broadcast -- I am rank %d. message: %f\n",taskid,(b[0][0]));
+    }
+    MPI_Barrier(MPI_COMM_WORLD);
+        
+    printf("Before broadcast -- I am rank %d. message: %f\n",taskid,(b[0][0]));
 
-   // si je suis le 0 je fais le broadcast les autres enregistre le message dans la var message
-   MPI_Bcast(&(b[0][0]), SIZE*SIZE, MPI_CHAR, 0,MPI_COMM_WORLD);
-   MPI_Barrier(MPI_COMM_WORLD);
-   
-
-	for (i=0; i<SIZE; i++) ids[i]=i;
-	printf("I am rank %d. ids: ",taskid);
-	for (i=0; i<SIZE; i++) printf("%d, ",ids[i]);
-	printf("\n");
-
+    // si je suis le 0 je fais le broadcast les autres enregistre le message dans la var message
+    MPI_Bcast(&(b[0][0]), SIZE*SIZE, MPI_CHAR, 0,MPI_COMM_WORLD);
+    MPI_Barrier(MPI_COMM_WORLD);
     
-   printf("After broadcast -- I am rank %d. rxids: ",taskid);
-    for (i=0; i<SIZE; i++)
-        for (j=0; j<SIZE; j++)
-            printf("%f",b[i][j]);
+	for (i=0; i<SIZE; i++) {
+        ids[i]=i;}
+    printf("I am rank %d. ids: ",taskid);
+	for (i=0; i<SIZE; i++) {
+        printf("%d, ",ids[i]);}
+    printf("\n");
+    printf("After broadcast -- I am rank %d. rxids: \n",taskid);
+    
+    for (i=0; i<SIZE; i++){
+        for (j=0; j<SIZE; j++){
+            printf(" %f|",b[i][j]);
+        }
+        printf("\n");
+    }
+
+    //scatter
+    //scatterv si c'est pas divisible
+    MPI_Barrier(MPI_COMM_WORLD); 
+    if (taskid == 0) {
+        printf("\nPress any key to continue to MPI_Scatter\n");
+        getchar();
+        printf("========================================\n");
+        printf(" Starting MPI_Scatter...");
+        printf("\n========================================\n");
+
+        // init ids array by rank 0
+        for (i=0; i<SIZE; i++) ids[i]=i;
+        printf("I am rank %d. ids: ",taskid);
+        for (i=0; i<SIZE; i++) printf("%d, ",ids[i]);
+        printf("\n");
+    }
+    MPI_Barrier(MPI_COMM_WORLD); 
+    printf("Before scatter -- I am rank %d. message: %f ",taskid,(a[0][0]));
+    for (int i = 0; i < SIZE; i++)
+    {
+        /* code */
+    }
+    
+    rows = SIZE / argc;
+    if (SIZE%argc != 0)
+    {
+        extra = SIZE%argc;
+    }
     
 
     

@@ -1,13 +1,43 @@
 --module a importer
-import Data.List
-import System.IO
+{-
+import Data.Char (isAlphaNum)
+import Data.List (groupBy, length)
+import Data.Map (Map,fromList)
+
+-- Function to count symbol occurrences
+symbolCount :: String -> Map Char Int
+symbolCount message =
+  let groups = groupBy (\c1 c2 -> isAlphaNum c1 == isAlphaNum c2) message
+  in fromList $ map (\group -> (head group, length group)) groups
+-}
+
+import Data.Char (ord)
+import Data.List (groupBy, length)
+import Data.Map (fromList,Map)
+
+-- Function to count symbol occurrences
+symbolCount :: String -> Map Char Int
+symbolCount message =
+  let charCounts = map (\c -> (c, length (filter (== c) message))) (supp message)
+  in fromList charCounts
+
+supp :: Ord a => [a] -> [a]
+supp = foldr (\x xs -> if x `elem` xs then xs else x : xs) []
+
+
+
+-- Example usage (assuming main is defined elsewhere)
+main = do
+  let message = "je comprend pas"
+  let counts = symbolCount message
+  print counts
 
 {- 
     ghci pour lancer le prompt de haskell
     :l nomDufichier.hs Permet de charcger le fichier
     :r pour rechercher les fichier charger
 -}
-
+{-
 main :: IO ()
 main = putStrLn "Hello, Haskell!"
 
@@ -72,3 +102,5 @@ divideBy9N13 = [x | x<- [1..500], x `mod` 13 == 0, x `mod`9 == 0]
 
 sortedList = sort [9,1,5,7,62,31,56,8]
 
+sumOfLists = zipWith
+-}

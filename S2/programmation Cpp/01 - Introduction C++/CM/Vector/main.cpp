@@ -18,16 +18,29 @@ using namespace std;
 
 #include <cmath>
 #include "Vector.hpp"
+using namespace std;
 
 inline double sum_sqrt(Vector& v)
 {
 	double sum = 0;
-  // TODO
+	for (unsigned int i = 0; i < v.size(); ++i)
+	{
+		sum += sqrt(v[i]);
+	}
 	return(sum);
 }
 
 int main(void)
 {
-  // TODO
+	Vector v = Vector(5);
+	for (int i = 0; i < v.size(); i++)
+	{
+		v[i]=i;
+	}
+	int sum=0;
+	
+	sum = sum_sqrt(v);
+	cout << sum;
+
 	return EXIT_SUCCESS;
 }

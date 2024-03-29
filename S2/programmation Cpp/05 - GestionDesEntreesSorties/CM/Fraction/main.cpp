@@ -12,7 +12,7 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 19-03-2024
+ * @ Modified time: 27-03-2024
  */
 
 #include <iostream>
@@ -21,26 +21,18 @@ using namespace std;
 
 #include "Fraction.hpp"
 
-int main(int argc, char const *argv[])
-{
-    
-    Fraction f1(4,5);
-    Fraction f2(3,11);
-    
-    Fraction f;
-    cout <<"Entrez une fraction :" <<endl;
-    cin >> f;
-    cout << f << endl;
-
+void exo2(Fraction f1){
     //2
     //on ouvre le fichier txt
     ofstream ofs("Fraction.txt",ios::out);
     //on écris la fraction f1 dedans puis la fraction f2
     ofs << f1;
-    ofs << f2;
     //on oublie pas de refermer le flux d'écriture
     ofs.close();
 
+}
+
+void exo3(){
     //3
     //ouverture du flux de lecture du fichier txt
     ifstream ifs("Fraction.txt");
@@ -68,6 +60,10 @@ int main(int argc, char const *argv[])
         cerr <<"Impossible d'ouvrir le fichier" << endl;
     }
 
+}
+
+void exo4(){
+    
     //4
     //gestion des exceptions du type 5/0 ce qui est impossible
     /*throw 0;
@@ -89,7 +85,21 @@ int main(int argc, char const *argv[])
     }*/
     
     
+}
 
+int main(int argc, char const *argv[])
+{
+    //1
+    Fraction f1(4,5);
+    Fraction f2(3,11);
+    Fraction f;
+    cout <<"Entrez une fraction :" <<endl;
+    cin >> f;
+    cout << f << endl;
+    
+    exo2(f1);
+    exo3();
+    exo4();
     return 0;
 }
 
