@@ -1,20 +1,20 @@
-/**
- * @ name: fileName
- * @ access: public
- * @ Path: filePath
- * @ Author: Richter Gustave
- * @ Create Time: 27-03-2024 12:44:25
- * @ email: richtergustave@gmail.com
- * @ description:
- * @ argument: NULL
- * @ input: NULL
- * @ output: NULL
- * @ return: NULL
- * @ copyright: Richter Gustave
- * @ Modified by: Name
- * @ Modified time: 29-03-2024
- */
-
+ /**
+  * @ name: fileName
+  * @ access: public
+  * @ Path: filePath
+  * @ Author: Richter Gustave
+  * @ Create Time: 27-03-2024 12:44:25
+  * @ email: richtergustave@gmail.com
+  * @ description:
+  * @ argument: NULL
+  * @ input: NULL
+  * @ output: NULL
+  * @ return: NULL
+  * @ copyright: Richter Gustave
+  * @ Modified by: Name
+  * @ Modified time: 29-03-2024
+  */
+ 
 using namespace std;
  
 #include <iostream>
