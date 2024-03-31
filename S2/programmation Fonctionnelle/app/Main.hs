@@ -1,19 +1,5 @@
---module a importer
-{-
-import Data.Char (isAlphaNum)
-import Data.List (groupBy, length)
-import Data.Map (Map,fromList)
-
--- Function to count symbol occurrences
-symbolCount :: String -> Map Char Int
-symbolCount message =
-  let groups = groupBy (\c1 c2 -> isAlphaNum c1 == isAlphaNum c2) message
-  in fromList $ map (\group -> (head group, length group)) groups
--}
-
-import Data.Char (ord)
-import Data.List (groupBy, length)
-import Data.Map (fromList,Map)
+import Data.List (length, sortBy)
+import Data.Map (fromList,Map,toList)
 
 -- Function to count symbol occurrences
 symbolCount :: String -> Map Char Int
@@ -24,13 +10,31 @@ symbolCount message =
 supp :: Ord a => [a] -> [a]
 supp = foldr (\x xs -> if x `elem` xs then xs else x : xs) []
 
+-- | List of occurrences ordered by count
+-- renvoie une liste de tuples [a,Int] ? pas une map a Int? 
+orderedCounts :: Ord a => [(a,Int)] -> [(a, Int)]
+orderedCounts elements = 
+  sortBy (\ (w1,count1) (w2,count2) -> compare count1 count2) $ elements
 
+
+-- Function to calculate Shannon entropy
+shannonEntropy :: Map a Int -> Double
+shannonEntropy counts =
+  let total = fromIntegral (sum (map snd (toList counts)))  -- Total count of symbols
+      probabilities = map (\(_, count) -> fromIntegral count / total) (toList counts)
+      log2Base = logBase 2  -- Or `log2` if available
+      entropy = sum $ map (\p -> if p == 0 then 0 else -p * log2Base p) probabilities
+  in entropy
 
 -- Example usage (assuming main is defined elsewhere)
 main = do
-  let message = "je comprend pas"
-  let counts = symbolCount message
+  let message = "Bonbon"
+  let counts = occurrences message
   print counts
+  let result = orderedCounts (toList counts )
+  print result
+  let entropy = entropy counts
+  print entropy
 
 {- 
     ghci pour lancer le prompt de haskell
