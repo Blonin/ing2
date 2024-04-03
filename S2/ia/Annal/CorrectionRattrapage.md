@@ -20,6 +20,8 @@ Les probabilités de transition sont les suivantes :
 
 Les récompenses associées sont de 10 pour la mise en production, 8 pour une arrivée sur le Test du modèle, 1 pour la Construction du modèle et 4 pour la Récupération des données. Les autres seront à 0.
 
+## Apprentissage par renforcement 1
+
 ### 1 Faire un schéma récapitulatif et donner la matrice de transition.
 
 On doit attribuer des valeur de transition a l'état "Prétraitement des données (P) 
@@ -50,4 +52,49 @@ Matrice de transition:
 ### 3 En utilisant le système de récompense, expliquer comment calculer la valeur de chaque état
 
 on multiplie la probabilitée de l'état et sa récompense
+part on des équation de bellman définissant les valeurs des états :
+pour tout états ,
+comme on est dans un ensemble d'états fini faire une représentation matricielle:
+V = R + gama * P * V 
+=> V - gama * P * V = R
+=> (Id - gama * P ) * V = R
+=> V = (Id - gama * P)-¹ * R
+
+## 2 Apprendtissage par renforcement 2
+
+### 4 Proposer une modélisation (détaillée) de ce problème.
+
+Etats : S = {16 case états désignées par des coord(xi,yi)}; 
+Action : Déplacement de l'agent dans l'une des quatres directions A= (haut,bas,droite,gauche)
+Transition : T = En tout état s, on peut réaliser n'importe qu'elle action
+Récompense :
+- -1 : Si l'action nous fait sortir de la grille
+- -10 : Si l'action nous amène sur une case noir
+- +10 : Si l'action nous amène sur une case verte
+- 0 : Sinon
+
+### 5 Donner la définition d’une stratégie et donner un exemple de stratégie non optimale et un autre d’une stratégie optimale.
+
++ Deterministe
+strat: S -->A
++ Probaliste 
+strat: S*A -->S
+
+Supposons s1 l'état initiale.
+
++ Stratégie non optimale :
+S1 bas
+S5 gauche
+S2 haut
+S3 droite
+S4 gauche
+
++ Stratégie optimale :
+S1 droite
+S2 droite
+S3 bas
+
+### 6 Donner la différence entre les méthodes model-based et model free. Pour chacune d’elles, donner un algorithme.
+
+
 
