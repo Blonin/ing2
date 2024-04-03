@@ -22,6 +22,9 @@ Les récompenses associées sont de 10 pour la mise en production, 8 pour une ar
 
 ### 1 Faire un schéma récapitulatif et donner la matrice de transition.
 
+On doit attribuer des valeur de transition a l'état "Prétraitement des données (P) 
++ Prétraitement des donnée → Labélisation des données (0.3) ou Construction et entraînement d’un modèle (0.7)
+
 Schéma:
 
 Graphe représentant la mise en production d'un modèle d'IA avec les étapes et les probabilités de transition ; 
@@ -32,12 +35,12 @@ Matrice de transition:
 |État actuel    | R     | L     | P     | C     | T     | M     |
 |---------------|-------|-------|-------|-------|-------|-------|
 |R              | 0.1   | 0.9   | 0     | 0     | 0     | 0     |
-|L              | 0     | 0     | 0.75  | 0.2   | 0.05  | 0     |
-|P              | 0     | 0     | 0     | 0     | 0     | 1     |
+|L              | 0.05  | 0     | 0.75  | 0.2   | 0     | 0     |
+|P              | 0     | 0.3   | 0     | 0.7   | 0     | 0     |
 |C              | 0     | 0     | 0     | 0.8   | 0.2   | 0     |
 |T              | 0     | 0     | 0     | 0     | 0.5   | 0.5   |
 |M              | 0     | 0     | 0     | 0     | 0     | 1     |
-
+|Récompense     | 0.1   | 0.3   | 0.4   | 0.5   | 0.8   | 1     |
 ### 2 Donner trois exemples de suites d’états possibles.
 
 + R, L, P, C, T, M
@@ -45,4 +48,6 @@ Matrice de transition:
 + R, L, P, C, T, T, M
 
 ### 3 En utilisant le système de récompense, expliquer comment calculer la valeur de chaque état
+
+on multiplie la probabilitée de l'état et sa récompense
 
