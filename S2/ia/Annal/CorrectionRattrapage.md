@@ -96,5 +96,24 @@ S3 bas
 
 ### 6 Donner la différence entre les méthodes model-based et model free. Pour chacune d’elles, donner un algorithme.
 
+## 3 Deep learning 
+
+### 7. Sur la figure 2, commenter les étapes 2 et 3.
+
+l'étape numéro 1 consiste a faire une normalisation des donnée de sorte que toutes les valeurs soient dans [0.1]
+l'étape numéro 2 est de la classification traité les variables catégorielles
+les labels sont encodées apr des entiers qui représentent des variables catégorielle l'opération permet au modèle de ne faire de régression et prédire un label 
+
+### 8. Sur la figure 3, décrire (sans répétition) les différentes couches.
+
++ input : couche d'entré du réseaux adaptée a la forme des images (32.32.3)
+canva2D: couche de convolution de 32 ou 64 filtres de taille (3.3) avec une fonction d'activation relu
+maxpooling2D : sous échantillonne les torseurs en entrée en divisant par 2 la hauteur et la largeur
+Flatten : permet de redimensionner un te sous forme de vecteur pour se servier d'entrer a un réseau entierement connecté
+Dropout : désactive un neurone avec 50% de chance d'éviter le surentrainement
+Dense : c'est le classificateur de la couche finale a 10 neuronne ( car 10 labels) avec une activation softmax pour retrouver un vecteur de proba a 10 composante chaque composant est la proba que l'image appartienne a la classe  représenté sous la forme de vecteurs avec des 0 et 1 sur la composante de la classe associé
+
+### 9. À partir de la figure 3, retrouver les hyperparamètres manquants.
+### 10. Sur la figure 5, commenter/décrire/expliquer les hyperparamètres loss, optimizer et metric
 
 
