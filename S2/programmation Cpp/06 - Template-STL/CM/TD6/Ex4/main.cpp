@@ -12,13 +12,14 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 29-03-2024
+ * @ Modified time: 05-04-2024
  */
 
 #include <list>
 #include <iostream>
 #include <map>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -61,6 +62,22 @@ int main(int argc, char const *argv[])
     cout <<endl;
 
     cout << "\n|---------------------|\n|--------ALGO---------|\n|---------------------|"<<endl ;
+
+    vector <int> v;
+    //compte le nombre d'occurences d'une valeur
+    int n = count(v.begin(),v.end(),1);
+    //mélange des valeurs
+    random_shuffle(myvector.begin(),myvector.end());
+    
+    for (auto it = v.begin(); it!=v.end(); ++it)
+    {
+        cout << ' ' << *it;
+    }
+    cout <<endl;
+
+    cout << "\n|---------------------|\n|--------FONC---------|\n|---------------------|"<<endl ;
+
+
 
     return 0;
 }
