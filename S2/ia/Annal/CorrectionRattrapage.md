@@ -118,13 +118,13 @@ Dense : c'est le classificateur de la couche finale a 10 neuronne ( car 10 label
 
 
 ## 4 Optimisation
-### 4.1 Compréhension
-#### 11. Définir la notion de problème à variables discrètes et problème à variables continues. Citer une méthode pour
+### A Compréhension
+#### 11 Définir la notion de problème à variables discrètes et problème à variables continues. Citer une méthode pour
 résoudre chacun d’entre eux.
 #### 12. On souhaite utiliser une métaheuristique pour résoudre un problème d’optimisation dont on ne connaît absolument
 pas l’optimum. Comment évaluer la pertinence de sa réponse et sa stabilité ?
 #### 13. Définir la notion de convergence pour l’algorithme du recuit simulé.
-### 4.2 Application
+### B Application
 ### Sujet :
 Nous souhaitons générer de manière automatique l’emploi du temps des ING2 GSI et MI, considérant le fait qu’il n’y a
 qu’un seul groupe par parcours.
