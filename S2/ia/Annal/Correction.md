@@ -73,7 +73,7 @@ S(3.1) bas
 # Deep learning
 
 ## Sujet :
-Dans cet exercice, nous consid ́erons le probl`eme de la reconnaissance des chiens et des chats sur des images. Nous supposons dans un premier temps que les images sont en niveau de gris (comme celles vues en TD) et qu’elles sont de taille 32 ×32. Nous cr ́eons pour cela un r ́eseau de neurones convolutif (ConvNet) ayant une couche de convolution contenant 32 tableaux de neurones et utilisant des filtres de taille 3 ×3, une couche Maxpooling et une couche Flatten.
+Dans cet exercice, nous considérons le problème de la reconnaissance des chiens et des chats sur des images. Nous supposons dans un premier temps que les images sont en niveau de gris (comme celles vues en TD) et qu’elles sont de taille 32 ×32. Nous créons pour cela un réseau de neurones convolutif (ConvNet) ayant une couche de convolution contenant 32 tableaux de neurones et utilisant des filtres de taille 3 ×3, une couche Maxpooling et une couche Flatten.
 
 ## 1 Calculez le nombre de paramètres de la couche de convolution.
 ![Correction 1](correctionIA.jpg "Dessin de correction")
@@ -91,7 +91,7 @@ Flatten : permet d'applatir un tenseur en vecteur pour passer en entrée d'un r�
 
 ### (a) Chaque image contient obligatoirement soit un chien soit un chat (mais pas les deux).
 - 1 neurone car classification binaire 
-- nombre de params: 15 * 15 * 23 + 1
+- nombre de params: 15 * 15 * 32 + 1
 - fonction d'activation : Sigmoïde
 
 ### (b) Nous avons un troisième type d’images ne contenant ni un chat ni un chien.
@@ -105,13 +105,13 @@ Flatten : permet d'applatir un tenseur en vecteur pour passer en entrée d'un r�
 - fonction d'activation : sigmoïde
 
 ## Sujet : 
-Supposons maintenant que les images sont en couleurs (RGB, ce qui est souvent le cas dans les probl`emes r ́eels). Chaque pixel est donc d ́efini par un triplet de réels.
+Supposons maintenant que les images sont en couleurs (RGB, ce qui est souvent le cas dans les problèmes réels). Chaque pixel est donc défini par un triplet de réels.
 
 ## 5 Qu’est-ce que cela change dans l’architecture du réseau ?
 
 Paramètres = poids + biais
 Pour une couche de convolution de 32 filtres de taille (3.3.3) on a:
-- 32 * 3 * 3 * **3** *  + 32 = 320
+- 32 * 3 * 3 * **3** *  + 32 = 896
 
 # Recuit simulé
 
@@ -122,5 +122,10 @@ Dans cet exercice, nous souhaitons résoudre par l’algorithme du recuit simul�
 • Chaque véhicule Vj est aussi connu par une adresse (par exemple l’adresse du logement ou du lieu de travail du propriétaire). Notons (zj ,tj ) les coordonnées définissant une telle adresse. Notre objectif est d’affecter à chaque véhicule une place de parking aussi proche que possible de l’adresse qui lui est associée. On appelle affectation un ensemble de N couples {(Pi,Vj )} dans lequel tous les Pi, ainsi que tous les Vj , sont deux à deux différents.
 
 ## 1 Donnez le nombre total d’affectations. En déduire qu’il est utile d’utiliser le recuit simulé pour la résolution du problème.
+
+Le nombre d'affectation se trouve avec cette formule : k! / (k-N)!
+Le recuit simulé étant adaptée a la recherche de solutions optimales dans des espaces de recherche vastes et complexes 
+Ici l'utilisation du recuit simulé est donc intérréssant puisque le nombre d'affectation s'envole très rapidement lors de l'augmentation de k et de N
+
 
 ## 2 Donnez une représentation des affectations, une définition du voisinage et la fonction à minimiser.

@@ -1,14 +1,11 @@
 
 # 1.
-en passant par le code assembler on remarquera qu'un ordi utilise
-un système CISC alors que l'autre utilise un RISC, CISCétant la surement 
-meilleur
+en passant par le code assembler on remarquera qu'un ordi utilise un système CISC alors que l'autre utilise un RISC, CISC étant la surement meilleur
 
 example:
 RISC vs CISC
 x86 vs ARM
-donc on ne peut pas tout simplement comparé le temps de résolution que sur le 
-nombre de MIPS
+donc on ne peut pas tout simplement comparé le temps de résolution que sur le nombre de MIPS
 
 # 2.
 1 000 000/40 = 25 000 
@@ -19,14 +16,15 @@ CPI=(cycles/instructions)
 ou  IPC = 35 000 / 17 000 =  2.059
 
 # 4.
-    time = nCrorale*10-6sec = 1.04 sec
+    time = nCycletotal*10-6sec = 1.04 sec
     
-    nCyclefp = 200 000 * 10 *0.6 = 800000
-    nCycleautre = 200 000 *40 =  240 000
-    nCycletotal== 1 040 000
+    nCycl40 = 200 000 * 2 *0.6 = 240 000
+    nCycleautre = 200 000 * 10 *0.4 = 800 000
+    nCycletotal = nCycleautre + nCycl40 = 1 040 000
 
-#5.  a. 100/x = 1/( 0.1 + 0.9/10 ) => x=19sec
-speed up = ancien temps / nouveau temps = 1/( FS+ FP/s) [cf p.41 du pdf]
+# 5. 
+    a. 100/x = 1/( 0.1 + 0.9/10 ) => x=19sec
+    speed up = ancien temps / nouveau temps = 1/( FS+ FP/s) [cf p.41 du pdf]
     FS = 1-FP
 
 s = nombre de coeur, s est quelque chose qui a été amélioré
@@ -34,7 +32,7 @@ par example
 
     90+10 = 100sec 
     9+10 = 19
-
+    
     b. S= 100/19=5.26 (pas d'unité on divise un temps par un temps,
     il s'agit d'une amélioration)
 
