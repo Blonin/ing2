@@ -117,3 +117,23 @@ Dense : c'est le classificateur de la couche finale a 10 neuronne ( car 10 label
 ### 10. Sur la figure 5, commenter/décrire/expliquer les hyperparamètres loss, optimizer et metric
 
 
+## 4 Optimisation
+### 4.1 Compréhension
+#### 11. Définir la notion de problème à variables discrètes et problème à variables continues. Citer une méthode pour
+résoudre chacun d’entre eux.
+#### 12. On souhaite utiliser une métaheuristique pour résoudre un problème d’optimisation dont on ne connaît absolument
+pas l’optimum. Comment évaluer la pertinence de sa réponse et sa stabilité ?
+#### 13. Définir la notion de convergence pour l’algorithme du recuit simulé.
+### 4.2 Application
+### Sujet :
+Nous souhaitons générer de manière automatique l’emploi du temps des ING2 GSI et MI, considérant le fait qu’il n’y a
+qu’un seul groupe par parcours.
+Générer un emploi du temps consiste à positionner un ensemble de n créneaux de 1h30 dans la semaine (on supposera
+qu’il existe au moins une configuration admissible).
+Un créneau consiste à affecter une heure de début, un cours, un groupe d’étudiants et une salle (avec une capacité).
+Un cours représente un couple prof / séance. Une séance est un CM ou un TD.
+Entre deux créneaux, il est nécessaire d’avoir 15 min de pause réglementaire et on ne fait pas cours avant 8h, de 12h30 à
+13h30 et après 20h.
+#### 14. Proposer une représentation pour décrire une solution candidate.
+#### 15. Étudier les contraintes d’admissibilité/faisabilité (explicites et implicites).
+#### 16. Quelle métaheuristique pourriez-vous utiliser pour résoudre ce problème ? Justifier
