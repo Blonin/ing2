@@ -6,27 +6,14 @@ int writearray (int *,int);
 
 int main(int argc, char const *argv[])
 {
-    int n=10;
-    int *a = (int *)malloc(n* sizeof(int));
-    int *b = (int *)malloc(n * sizeof(int));
-    omp_set_num_threads(5);
+    omp_set_num_threads(8);
+    printf("num thread : %d \n",omp_get_num_threads());
+
+    #pragma omp parallel num_threads(4){
+        int id = omp_get_thread_num();
+        printf("id : %d",id);
+        printf("cb de thread : %d",omp_get_num_threads());
+    }
     
 }
 
-#pragma omp parallel()
-{
-    int i;
-    int block = n/omp_get_num_threads();
-    int start = omp_get_thread_num()*block;
-    int end = start+block;
-    #pragma omp single{
-        readarray(b,n);
-        for (i = 0; i < __END_DECLS; i++)
-        {
-            a[i] = b[i];
-        }
-    }
-    #pragma omp single{
-        writearray(a,n);
-    }       
-}
