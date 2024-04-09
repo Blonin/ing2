@@ -12,7 +12,7 @@
  * @ return: NULL
  * @ copyright: Richter Gustave
  * @ Modified by: Name
- * @ Modified time: 05-04-2024
+ * @ Modified time: 09-04-2024
  */
 
 #include <list>
@@ -20,7 +20,10 @@
 #include <map>
 #include <vector>
 #include <algorithm>
+
 using namespace std;
+
+#include "Vector.hpp"
 
 int main(int argc, char const *argv[])
 {
@@ -77,7 +80,48 @@ int main(int argc, char const *argv[])
 
     cout << "\n|---------------------|\n|--------FONC---------|\n|---------------------|"<<endl ;
 
+    
 
+    // Jeu de test pour Foncteur (fonction objet)
+    int numbers[] = {54,63,15,65,89,55,1,8,155,23};
+    sort(numbers,numbers+5,plusGrand<int>());
+    
+    cout << "\nFoncteur (Function Object):\n";
+    for (const auto& num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    // Jeu de test pour lambda-expression & for-each
+    Vector<int> v(6) = {10, 20, 40, 50, 10, 30};
+
+    cout << "\nLambda-expression & for-each:\n";
+    for_each(v.begin(), v.end(), [](int num) { 
+        cout << num * 2 << " "; 
+        });
+    cout << endl;
 
     return 0;
+}
+
+template <typename T>
+class plusGrand
+{
+private:
+public:
+    bool operator() (const T& x, const T& y) const{
+        return x >y;
+    }
+    plusGrand();
+    ~plusGrand();
+};
+
+template <typename T>
+plusGrand<T>::plusGrand()
+{
+}
+
+template <typename T>
+plusGrand<T>::~plusGrand()
+{
 }
