@@ -16,7 +16,7 @@ les réseaux de neuronnes convolutifs sont plus souvent utilisé dans l'analyse 
     + Meilleure chance de trouver un optimum global.
 
 ### (b) Expliquer le principe de l’évaluation de la différence de score entre un candidat et son voisin et l’utilisation du critère de Métropolis
-on analyse les positions du candidat par rapport a celui de son voisin si le voisin a une meilleur positions on l'accepte sinon on le rejete.
+    on analyse les positions du candidat par rapport a celui de son voisin si le voisin a une meilleur positions on l'accepte sinon on le rejete.
 Le critère de metropolis lui permet de temps en temps d'accepter un voisin que l'on aurait rejeté pour possiblement sortir d'un minimas local
 
 ### (c) Pourquoi l’algorithme du recuit simulé converge-t-il?
