@@ -1,0 +1,76 @@
+[
+    {
+      "id": 0,
+      "question": [
+        "Que signifient les couleurs de pictogrammes ?",
+        "Quels sont les pictos d’AMI COMPTA ?",
+        "Tu m'explique les couleurs de pictos ?"
+      ],
+      "reponse": 
+        {
+          "content": {
+            "documentation_page": "pictograms"
+          },
+          "id": 1,
+          "name": "provide_documentation",
+          "role": "assistant",
+          "type": "function"
+        },
+      "temps de réponse": 1.076
+    },
+    {
+        "id": 1,
+        "question": [
+            "Tu peux m'expliquer s'il y a des raccourcis clavier sur AMI COMPTA ?"
+        ],
+        "reponse": 
+            {
+                "content": {
+                    "documentation_page": "shortcuts"
+                },
+                "id": 1,
+                "name": "provide_documentation",
+                "role": "assistant",
+                "type": "function"
+            },
+        "temps de réponse": 0.9246
+    },
+    {
+      "id": 2,
+      "question": [
+        "Trouve moi les 8 factures edf en avril 2023"
+      ],
+      "function": "find_invoices",
+      "link": "",
+      "reponse": {
+        "content": {
+          "date_type": "billing_date",
+          "end_date": "2023-04-30",
+          "invoice_number": "8",
+          "provider": "EDF",
+          "start_date": "2023-04-01"
+        },
+        "id": 1,
+        "name": "find_invoices",
+        "role": "assistant",
+        "type": "function"
+      }
+    },
+    {
+      "id": 3,
+      "question": [
+        "trace moi un graphe ?"
+      ],
+      "reponse": {
+        "content": {
+          "data_from": "any"
+        },
+        "id": 1,
+        "name": "plot_graph",
+        "role": "assistant",
+        "type": "function",
+        "x": "pasDéfini"
+      },
+      "temps de réponse": 2.6631
+    }
+  ]

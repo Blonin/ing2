@@ -1,0 +1,232 @@
+[
+{
+    "id": 5,
+    "question": [
+      "Quelles sont les futures évolutions d’AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://evolutions.agiris.fr/b/ami-compta",
+    "reponse": {
+      "content": "Je suis navré de ne pas pouvoir vous répondre précisément au sujet des évolutions récentes ou futures des fonctionnalités d’AMI COMPTA. Cependant, AMI COMPTA bénéficie de mises à jour régulières pour en améliorer le confort d’utilisation, les systèmes automatisés et les interactions avec les autres outils AGIRIS.\n\nSi vous désirez consulter ou proposer de nouvelles évolutions pour AMI COMPTA, vous pouvez nous en faire part sur Upvoty.",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 97,
+    "question": [
+      "Comment savoir où se trouve le document que je viens d’importer ?",
+      "Qu’est devenue ma facture importée ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_Utilisation.pdf",
+    "reponse": {
+      "content": "Pour retrouver un document importé, vous pouvez consulter l’onglet « Traçabilité » situé dans « Pilotage ».\nChaque ligne correspond à un import, en bout de ligne, l’icône œil « visualiser » permet de voir le statut de chaque page de l’import grâce au code couleur.",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 98,
+    "question": [
+      "J’ai le message : Fiche client incomplète, quels sont les éléments à vérifier"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_Administration.pdf",
+    "reponse": {
+      "content": "Dans ce cas, les données suivantes doivent être correctement renseignées :\n- Numéro SIRET (il doit figurer dans la base gouvernementale et sans opposition)\n- Nom de l’entreprise\n- Ville de l’entreprise\n- Numéro SIREN\n- Numéro TVA intracommunautaire\n- Code APE\n\nAussi, le dossier doit être initialisé sur ISACOMPTA CONNECT.",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 100,
+    "question": [
+      "Pourquoi je ne vois pas mon dossier dans l’accueil ?",
+      "Le dossier n’apparaît pas sur l’accueil."
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_Administration.pdf",
+    "reponse": {
+      "content": "Si votre dossier ne s’affiche pas en page d’accueil, il y a deux possibilités :\n\n1. Le collaborateur n’est pas affecté au dossier : Dans ce cas, dirigez-vous vers « Administration » puis « Gérez vos utilisateurs », sur la ligne correspondant au collaborateur, utilisez l’action « Gestion des droits du dossier » et cochez les dossiers voulus puis validez.\n\n2. Le dossier est vide : Il n’y a pas encore eu de dépôt sur le dossier, ou alors toutes les pièces ont déjà été traitées. Vous pouvez cocher la case « Afficher les exercices inactifs » pour le visualiser.",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 82,
+    "question": [
+      "Puis-je avoir une présentation d’AMI COMPTA ?",
+      "Y a-t-il une vidéo explicative d’AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://videos.groupeisa.com/video/LpnZ/presentation-ami-compta",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 83,
+    "question": [
+      "Comment utiliser DEMAT’BOX ?",
+      "Comment utiliser DEMAT’GO ?",
+      "Comment fonctionnent DEMAT’BOX et DEMAT’BOX avec AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_Integration%20DEMATBOX%20DEMATGO%20client.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 84,
+    "question": [
+      "Quels sont les différents canaux de collecte ?",
+      "Comment utiliser les canaux de collecte via API ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Les%20diff%C3%A9rents%20canaux%20de%20collectes.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 85,
+    "question": [
+      "Comment utiliser AMI COMPTA ?",
+      "As-tu de la documentation pour AMI COMPTA ?",
+      "Je peux avoir le manuel d’AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_Utilisation.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 86,
+    "question": [
+      "C’est quoi la banette de découpage ?",
+      "Comment utiliser la banette ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Bannette%20de%20d%C3%A9coupage.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 87,
+    "question": [
+      "Comment changer l’exercice d’une facture ?",
+      "Je veux modifier l’exercice d’une facture, comment faire ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Changer%20d%20exercice.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 88,
+    "question": [
+      "Y a-t-il des raccourcis clavier ?",
+      "Comment gagner du temps sur l’utilisation d’AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Les%20touches%20de%20raccourcis.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 89,
+    "question": [
+      "Comment lier AMI COMPTA à ISACOMPTA CONNECT ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/Liens%20AMI%20COMPTA%20-%20ISACOMPTA%20CONNECT_V1385.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 90,
+    "question": [
+      "Comment optimiser le temps de traitement ?",
+      "Comment accélérer la saisie ?",
+      "Comment gagner du temps avec AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Les%20bonnes%20pratiques.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 91,
+    "question": [
+      "Comment gérer les utilisateurs ?",
+      "Comment gérer les dossiers ?",
+      "Comment gérer les codes APE ?",
+      "Comment activer la validation auto des pictos verts ?",
+      "Comment définir les factures de référence ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_Administration.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 92,
+    "question": [
+      "Comment utiliser AMI COMPTA ?",
+      "Je débute avec l’utilisation d’AMI COMPTA, j’ai besoin d’aide.",
+      "Comment commencer sur AMI COMPTA ?",
+      "Comment créer un dossier ?",
+      "Comment créer un compte pour un collaborateur sur AMI COMPTA ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Vos%20premiers%20pas%20dans%20AMI%20COMPTA%20en%20attendant%20l'accompagnement%20AGIRIS.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  },
+  {
+    "id": 93,
+    "question": [
+      "Quels dossiers importer sur AMI COMPTA ?",
+      "Quels dossiers lancer en premier sur AMI COMPTA  ?"
+    ],
+    "function": "",
+    "link": "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Quels%20dossiers%20lancer%20en%20premier%20sur%20AMICOMPTA.pdf",
+    "reponse": {
+      "content": "",
+      "role": "knowledge",
+      "type": "link"
+    }
+  }
+]

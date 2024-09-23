@@ -1,0 +1,1454 @@
+[
+    {
+        "id": 0,
+        "question": [
+            "À quoi correspond le taux d’automatisation (TA) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le taux d'automatisation (TA) correspond à un indicateur de la qualité des prédictions effectuées par AMI COMPTA. Il mesure le pourcentage de bonnes prédictions pour chaque champ. Par exemple, un taux d'automatisation de 80 signifie que 4 champs sur 5 sont prédits avec succès, ce qui permet de réduire considérablement le temps passé sur la saisie comptable."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.0062
+    },
+    {
+        "id": 1,
+        "question": [
+            "Sur quels champs se base le taux d’automatisation ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Il existe un taux d'automatisation pour chaque champ saisi dans AMI COMPTA. Cela signifie qu'il y a un taux d'automatisation spécifique pour chaque champ, ainsi qu'un taux moyen qui regroupe l'ensemble des champs."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.7455
+    },
+    {
+        "id": 2,
+        "question": [
+            "Comment puis-je savoir ce que m’apporte AMI COMPTA en terme d’automatisation de saisie ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le taux d'automatisation est un bon indicateur pour mesurer ce que vous apporte AMI COMPTA en termes d'automatisation de saisie. Vous pouvez le consulter dans les onglets \"Statistiques\" ou \"Tableau de bord\" de votre compte AMI COMPTA. Ces sections vous fourniront des informations détaillées sur le pourcentage de champs que j'ai prédits avec succès. Vous pouvez également me demander ces données sous forme de graphiques ou de fichiers CSV."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.5596
+    },
+    {
+        "id": 3,
+        "question": [
+            "Quelles sont les raisons d’une mauvaise reconnaissance ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Une mauvaise reconnaissance peut venir de plusieurs sources. Le cas le plus fréquent est l'apparition d'un nouveau fournisseur, pour lequel il faudra plusieurs factures avant que je puisse apprendre. Parfois, la mauvaise qualité d'image m'empêche de lire les informations. Dans certains cas, les factures sont dans un format très complexe, pour l'humain comme pour moi."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.0097
+    },
+    {
+        "id": 4,
+        "question": [
+            "Comment puis-je améliorer le taux d'automatisation sur mes dossiers ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "C’est une bonne initiative ! Il y a plusieurs moyens d’améliorer la reconnaissance. Tout d’abord, il est essentiel de fournir des images de facture lisibles. Ensuite, il est judicieux de vérifier les prédictions et de les corriger durant la saisie, car je me baserai sur celles-ci pour les prochaines factures du même fournisseur. Enfin, l’augmentation du volume avec une saisie homogène améliorera le taux d'automatisation car je m’adapte à la saisie au sein du cabinet, vous pouvez pour cela utiliser des outils tels que la « facture de référence »."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 4.2432
+    },
+    {
+        "id": 5,
+        "question": [
+            "Pourquoi tous ces arrêts de service ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Veuillez nous excuser pour la gêne occasionnée par les interruptions de service que vous avez pu rencontrer. Leurs causes sont multiples, la plupart sont dues à des mises à jour planifiées, mais parfois des correctifs urgents peuvent exiger des interruptions imprévues. Dans cette éventualité, nos équipes font tout leur possible pour rétablir le service au plus vite, et nous vous invitons à réessayer de vous connecter régulièrement."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.0737
+    },
+    {
+        "id": 6,
+        "question": [
+            "Quelles sont les causes possibles d'une mauvaise détection des totaux sur les factures ?",
+            "Comment améliorer la reconnaissance des montants sur les factures ?",
+            "Que faire si la détection des montants ne fonctionne pas correctement ?",
+            "Comment contacter le support client pour signaler un problème de détection des totaux ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Une mauvaise détection des totaux sur les factures peut avoir plusieurs causes. Tout d'abord, il est important que la facture soit bien lisible et que les informations soient clairement visibles. Ensuite, certains formats de factures atypiques peuvent poser problème à la reconnaissance, mais celle-ci s'ajuste généralement après avoir saisi un certain nombre de factures du même format. Si le problème persiste, vous pouvez contacter notre support client pour signaler le problème de détection des totaux. Ils pourront transmettre votre demande à notre équipe de développement pour une résolution rapide."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.059
+    },
+    {
+        "id": 7,
+        "question": [
+            "Quand comptez-vous améliorer la reconnaissance du total ht, tva ou ttc ?",
+            "Y aura-t-il de nouvelles mises-à-jour pour une meilleure détection des montants ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Nous améliorons en permanence les systèmes de reconnaissance d’AMI COMPTA pour qu’ils puissent s’adapter à tout format de facture. Si vous rencontrez des erreurs récurrentes sur les totaux ou la date d’un format donné, je vous invite à en faire part au support d’AMI COMPTA pour que notre équipe de développement en soit informée et puisse intervenir."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.3342
+    },
+    {
+        "id": 8,
+        "question": [
+            "Pourquoi ai-je des fichiers importés affichés comme \"non reçu\" ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Il peut y avoir plusieurs explications pour les factures affichées comme \"non reçu\" dans AMI COMPTA :\n- Des microcoupures internet peuvent avoir empêché le téléchargement complet des fichiers. Je vous recommande de privilégier une connexion filaire plutôt qu'une connexion Wi-Fi.\n- Si les fichiers importés sont volumineux (en termes de poids, de taille ou de nombre de fichiers dans un envoi), cela peut également causer des problèmes de réception. Assurez-vous que les fichiers sont correctement téléchargés avant de les importer dans AMI COMPTA.\n- Il est également possible que le problème soit lié à l'utilisation du logiciel. Assurez-vous d'avoir téléchargé les fichiers à partir de leur source d'origine (par exemple, un e-mail ou un fichier ZIP) avant de les importer dans AMI COMPTA.\n\nSi le problème persiste, je vous recommande de contacter notre support client pour obtenir une assistance supplémentaire."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 4.2483
+    },
+    {
+        "id": 9,
+        "question": [
+            "Quelle est la meilleure manière d'utiliser Ami Compta ?",
+            "Comment utiliser Ami Compta ?",
+            "Pourquoi passe-je tant de temps à attendre ?",
+            "Comment pallier les lenteurs d'Ami Compta ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "La meilleure manière d'utiliser AMI COMPTA est de partitionner les tâches :\n   Jour 1 : import de factures\n   Jour 2 : découpage des factures importées la veille\n   Jour 3 : saisie des factures découpées la veille\nCela vous permettra d'éviter d'attendre à chaque traitement : prédiction, découpage, validation. Ceci est également valable pour les créations et clôtures de dossiers et / ou d'exercices !\n\nSi vous rencontrez des lenteurs avec AMI COMPTA, je vous recommande de vérifier votre connexion internet et de privilégier une connexion filaire plutôt qu'une connexion Wi-Fi. Vous pouvez également contacter notre support client pour obtenir une assistance supplémentaire.\n\nDocument link(s) :\n\nAMI COMPTA_FP_Les touches de raccourcis.pdf"
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            },
+            {
+                "content": [
+                    "AMI COMPTA_FP_Les touches de raccourcis.pdf",
+                    "https://tclient.groupeisa.com/documentations/amicompta/Doc/AMI%20COMPTA_FP_Les%20touches%20de%20raccourcis.pdf"
+                ],
+                "id": 1,
+                "role": "knowledge",
+                "type": "link"
+            }
+        ],
+        "temps de réponse": 3.8867
+    },
+    {
+        "id": 10,
+        "question": [
+            "Comment avoir plus de factures vertes (au pictogramme vert) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour avoir plus de factures au pictogramme vert, il est recommandé d'homogénéiser les saisies. Cela signifie qu'il faut appliquer la même méthode de saisie aux factures d'un même tiers, en utilisant toujours les mêmes comptes. Il est important que cette homogénéisation soit respectée par tous les utilisateurs effectuant la saisie."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.5172
+    },
+    {
+        "id": 11,
+        "question": [
+            "Pourquoi utiliser Ami Compta ?",
+            "Pourquoi continuer à utiliser Ami Compta ?",
+            "Quel est l'intérêt d'Ami Compta ?",
+            "À quoi sert Ami Compta ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Ami Compta permet un gain de temps dans tout le processus de saisie comptable : à la saisie des factures en prédisant d’après les saisies déjà effectuées, mais aussi lors du découpage du pdf en documents."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1042
+    },
+    {
+        "id": 12,
+        "question": [
+            "J'ai un problème, comment contacter le support Ami Compta ?",
+            "Comment préparer mon contact au support Ami Compta ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour contacter le support Ami Compta, vous pouvez envoyer un mail à l'adresse poleamicompta@agiris.fr ou téléphoner au 03.44.06.69.35. Dans le but de vous aider le plus efficacement possible, pensez à systématiquement préparer un cas concret pour illustrer votre problématique. Par exemple, dans le dossier XXX, exercice XXX, pour la facture XXX, depuis le menu XXX, quand je fais telle action, il se passe ceci, alors que j'attends cela."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.712
+    },
+    {
+        "id": 13,
+        "question": [
+            "Quand les temps de traitements d'Ami Compta sont-il les meilleurs ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Comme pour tout outil web, il est conseillé de privilégier l'utilisation d'Ami Compta au moment où il est le moins sollicité. Dans mon cas, je vous conseille de favoriser la période entre le 25 et le 15 du mois suivant, et je serai tout à vous !"
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.644
+    },
+    {
+        "id": 14,
+        "question": [
+            "C’est quoi l’IA ?",
+            "Quels sont les processus d’Intelligence artificielle utilisés dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour faire court, l’Intelligence Artificielle (IA) représente tous les systèmes décisionnels automatisés. Dans AMI COMPTA, l’IA est utilisée dans plusieurs processus, tels que la lecture du texte sur l’image (OCR), le découpage ou regroupement des pages en documents, la prédiction des contreparties en se basant sur les saisies précédentes, et bien d'autres encore."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.6607
+    },
+    {
+        "id": 15,
+        "question": [
+            "C’est quoi le machine learning ?",
+            "Qu’est-ce qui relève de l’apprentissage automatique dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le Machine Learning ou apprentissage machine est la branche de l’IA qui permet à un ordinateur d’apprendre à résoudre des tâches parfois complexes à partir de données sans programmation explicite. Dans AMI COMPTA, le machine learning est utilisé pour la reconnaissance de texte sur la facture, le découpage des pages en documents, les prédictions d’écritures comptables, et même pour déterminer la couleur des pictogrammes. Cela permet à AMI COMPTA d'apprendre des actions répétitives des utilisateurs et de les reproduire, automatisant ainsi les tâches routinières et rébarbatives."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.8725
+    },
+    {
+        "id": 16,
+        "question": [
+            "Les apprentissages du logiciel peuvent-ils être généralisés sur plusieurs dossiers du Cabinet ou de l’AGC, ou faut-il faire l'apprentissage sur chaque dossier ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le premier niveau de connaissance se place au dossier, puis un partage de connaissance s’opère entre les dossiers de même secteur d’activité du cabinet. Attention, une exception est à noter sur la connaissance « articles » qui est uniquement au niveau dossier, c’est-à-dire pas de partage de connaissance inter dossiers."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.9484
+    },
+    {
+        "id": 17,
+        "question": [
+            "L'apprentissage est-il instantané ou faut-il \"recharger\" les documents pour prise en compte des derniers apprentissages sur les documents suivants ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "L’apprentissage est instantané, AMI COMPTA apprend à partir du moment où les informations sont corrigées ou validées. Au bout de plusieurs passages, la facture est reconnue et une écriture est proposée avec un niveau de confiance haut (vert ou jaune)."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.5121
+    },
+    {
+        "id": 18,
+        "question": [
+            "L’apprentissage est-il commun à tous ou séparé par cabinet ?",
+            "D’autres cabinets ont-il accès à mes données de saisie ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA fonctionne sur une base nationale. Pour effectuer une reconnaissance, il puise dans les informations de toutes les entités qui l'utilisent. Ainsi, il sait rapprocher une facture fournisseur et le contexte du dossier traité pour faire une proposition d'écriture. L’apprentissage porte sur le dossier et la connaissance est partagée sur les dossiers du même code APE, indépendamment des utilisateurs (mutualisation des informations pour une plus grande capacité d'apprentissage et de propositions). AMI COMPTA prend aussi en considération le paramétrage et les étalons du dossier. Chaque utilisateur conserve la main pour valider les propositions et confirmer que l'apprentissage est correct, selon le contexte de son dossier.\n\nLes données de saisie sont confidentielles et ne sont pas accessibles par d'autres cabinets. Les informations sont sécurisées et protégées conformément aux réglementations en vigueur."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 4.55
+    },
+    {
+        "id": 19,
+        "question": [
+            "Est-il possible de corriger le « mauvais apprentissage » de l’IA (suite à une erreur d’un collaborateur par exemple) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, il est possible de corriger le \"mauvais apprentissage\" de l'IA suite à une erreur d'un collaborateur. Pour ce faire, il suffit de faire une saisie avec les bonnes informations de manière répétée. AMI COMPTA va ainsi oublier l'ancienne méthode de saisie pour privilégier la nouvelle. Si la modification est majoritaire dans le traitement de factures similaires, alors elle sera proposée aux dossiers qui intègreront ce type de facture pour la première fois."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.7438
+    },
+    {
+        "id": 20,
+        "question": [
+            "Y-a-t-il des paramétrages manuels à effectuer dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Il n'y a pas de paramétrage manuel à effectuer au préalable. C'est l'IA qui permet de produire les écritures comptables et les comptes associés. L'apprentissage se construit et s'alimente sur des saisies manuelles utilisateurs."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.1239
+    },
+    {
+        "id": 21,
+        "question": [
+            "Au niveau du libellé, quelles informations l'outil récupère-t-il sur les factures ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le libellé repris par AMI COMPTA est celui du compte utilisé. Il est recommandé de ne pas personnaliser les libellés afin d'homogénéiser les saisies et d'obtenir une meilleure qualité de connaissance."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.2838
+    },
+    {
+        "id": 22,
+        "question": [
+            "Comment est géré la numérotation",
+            "l'incrémentation des factures ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA gère la numérotation des factures. En effet, le numéro de pièce est automatiquement calculé par AMI COMPTA et il est transféré à ISACOMPTA lors de la comptabilisation. Il sert de référence pour retrouver le document au sein d'AMI COMPTA en cas de contrôle. De plus, AMI COMPTA extrait le numéro de facture (référence facture) quand il est identifié et le renseigne dans le champ \"Numéro de facture\" de l'écriture comptable."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.9394
+    },
+    {
+        "id": 23,
+        "question": [
+            "AMI COMPTA gère-t-il les factures avec plusieurs taux de TVA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, AMI COMPTA peut gérer plusieurs taux de TVA sur une même facture. Il distingue les multi-taux de TVA et les multilignes articles. La gestion est conditionnée par le choix utilisateur. À minima, AMI COMPTA va faire la ventilation de la TVA (autant de ligne que de taux de TVA). Concernant les articles, c'est le choix utilisateur qui déterminera le fonctionnement d'AMI COMPTA : une ligne HT pour l'ensemble de la facture, gestion de quelques articles spécifiquement et tous les autres dans le compte par défaut, ou chaque article génère une ligne comptable."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.7811
+    },
+    {
+        "id": 24,
+        "question": [
+            "La reconnaissance est-elle liée uniquement à l'activité ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA prend en considération l'activité du dossier (code APE), le paramétrage du dossier et les étalons utilisés. Il est possible de mutualiser la connaissance entre dossiers de secteur d’activité différent grâce au regroupement de code APE."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.106
+    },
+    {
+        "id": 25,
+        "question": [
+            "Comment AMI COMPTA gère-t-il une facture comportant des articles n'ayant jamais été traités dans l'outil ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA prédit selon ce qu'il a appris. Dans le cas d'une nouvelle facture avec des articles n'ayant jamais été appris, il n'y aura pas de lignes générées automatiquement."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.2098
+    },
+    {
+        "id": 26,
+        "question": [
+            "Sur quoi l'outil se base-t-il pour extraire un article d'une facture ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour distinguer un article d'un autre, AMI COMPTA se base sur l'ensemble des éléments disponibles dans la facture."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.9959
+    },
+    {
+        "id": 27,
+        "question": [
+            "Quelle gestion pour les factures non parvenues (FNP) dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Les factures non parvenues ne sont pas traitées pour l'instant dans AMI COMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.775
+    },
+    {
+        "id": 28,
+        "question": [
+            "La périodicité figurant sur une facture (ex. : location) est-elle gérée par AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, AMI COMPTA gère les champs ISACOMPTA Date 1 et Date 2 pour prendre en compte la périodicité figurant sur une facture, comme dans le cas d'une location."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1244
+    },
+    {
+        "id": 29,
+        "question": [
+            "L'outil gère-t-il les factures avec de la TVA intracommunautaire ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, AMI COMPTA gère les codes de TVA et l'autoliquidation de la TVA pour les factures d'acquisition intracommunautaire."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.9806
+    },
+    {
+        "id": 30,
+        "question": [
+            "Les articles sont-ils créés automatiquement ou faut-il les créer ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Lors du traitement de la facture, les articles sont créés automatiquement sur la base des saisies précédentes de l’utilisateur."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.7511
+    },
+    {
+        "id": 31,
+        "question": [
+            "Est-il possible d’utiliser plusieurs fois un même compte de charge ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, il est possible d'utiliser un même compte de charge plusieurs fois, pour une même facture."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.927
+    },
+    {
+        "id": 32,
+        "question": [
+            "AMI COMPTA gère-t-il les factures en devise ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Non, les factures en devise ne sont pas gérées par AMI COMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.4951
+    },
+    {
+        "id": 33,
+        "question": [
+            "Quel navigateur internet est préconisé pour AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Edge Chromium et Google Chrome sont pris en charge par AMI COMPTA. L'utilisation de Mozilla Firefox est déconseillée."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.6809
+    },
+    {
+        "id": 34,
+        "question": [
+            "Dans AMI COMPTA, récupère-t-on les paramètres d'ISACOMPTA (journaux, plan comptable, codes TVA) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, AMI COMPTA récupère les paramètres d'ISACOMPTA tels que les journaux, le plan comptable et les codes TVA. Il fonctionne en synchronisation directe avec ISACOMPTA, ce qui permet de bénéficier des paramétrages déjà en place dans votre dossier comptable."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.0246
+    },
+    {
+        "id": 35,
+        "question": [
+            "Est-il possible d'avoir un compte fournisseurs divers ou faut-il créer un compte par fournisseur ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Il est tout à fait possible d'avoir un compte fournisseurs divers, mais notre préconisation est de minimiser leur utilisation pour optimiser la connaissance."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1303
+    },
+    {
+        "id": 36,
+        "question": [
+            "Peut-on saisir les quantités dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, les quantités peuvent être saisies dans AMI COMPTA. Les colonnes correspondantes s'activent en fonction du paramétrage du compte issu d'ISACOMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1313
+    },
+    {
+        "id": 37,
+        "question": [
+            "Est-il possible de faire des calculs dans la zone de saisie ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, il est tout à fait possible d'effectuer des calculs dans la zone de saisie d'AMI COMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.8224
+    },
+    {
+        "id": 38,
+        "question": [
+            "Dans le cas d'une acquisition d'immobilisation, sera-t-elle automatiquement créée dans le module Immobilisations d'ISACOMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Non, il faudra effectuer la création dans ISACOMPTA via la consultation du Grand-Livre ou directement via le module des Immobilisations."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1298
+    },
+    {
+        "id": 39,
+        "question": [
+            "AMI COMPTA traite-t-il l'analytique ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "La gestion de l'analytique n'est pas intégrée à AMI COMPTA car elle nécessiterait la mise en place de paramétrages et de règles de gestion. L'affectation analytique doit donc se faire dans ISACOMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.4373
+    },
+    {
+        "id": 40,
+        "question": [
+            "La gestion des doublons se fait sur quels critères ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "La gestion des doublons s'effectue sur les critères suivants : N° facture, Date, Montants Totaux, Fournisseur."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1003
+    },
+    {
+        "id": 41,
+        "question": [
+            "Sur un dossier, la gestion des doublons prend-elle en compte des écritures passées dans ISACOMPTA avant la mise en place d’AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Non, AMI COMPTA est capable de reconnaître uniquement les doublons sur les documents qui ont été traités sur la plateforme."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.161
+    },
+    {
+        "id": 42,
+        "question": [
+            "Faut-il une version ISACOMPTA en cloud pour pouvoir utiliser AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "ISACOMPTA ne doit pas être installé en SAAS obligatoirement.\n\nLes phases de synchronisation sont lancées à l'initiative d'ISACOMPTA, manuellement par l'utilisateur ou via une tâche planifiée.\nIl faut disposer d'une connexion Internet correctement dimensionnée pour permettre les échanges entre les deux applications."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.9851
+    },
+    {
+        "id": 43,
+        "question": [
+            "Comment se fait le lien entre ISACOMPTA installé sur un serveur et AMI COMPTA dans le cloud ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "L'acquisition de la licence AMI COMPTA active automatiquement les fonctionnalités de synchronisation entre les deux applications.\nLes utilisateurs peuvent activer AMI COMPTA à partir de la fiche client du dossier concerné (Comptabilité / Dossier lié avec AMI COMPTA) s'ils ont les droits d'accès."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.5818
+    },
+    {
+        "id": 44,
+        "question": [
+            "L'utilisation d'AMI COMPTA va-t-elle nécessiter une harmonisation des dossiers étalons pour l'ensemble des structures concernées ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA travaille sur 2 niveaux : une connaissance globale et partagée, et une connaissance contextuelle limitée au Cabinet ou à l'AGC.\nAMI COMPTA respectera toujours les méthodes de saisies et les dossiers étalons en place."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.46
+    },
+    {
+        "id": 45,
+        "question": [
+            "Est-il possible qu’AMI COMPTA génère les fichiers .DEX dans les Bxx.COW ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, AMI COMPTA est capable de générer les fichiers .DEX dans les Bxx.COW correspondants en fonction du code dossier connu dans AMI COMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.0659
+    },
+    {
+        "id": 46,
+        "question": [
+            "AMI COMPTA fonctionne-t-il sur un autre éditeur qu'ISACOMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Non, AMI COMPTA fonctionne uniquement avec ISACOMPTA et est intégré spécifiquement à ce logiciel."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1595
+    },
+    {
+        "id": 47,
+        "question": [
+            "Quel lien entre ISAGI et AMI COMPTA ? Peut-il récupérer les informations du portefeuille ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA est directement connecté à ISACOMPTA. Ainsi, les utilisateurs et les dossiers comptables affectés sont automatiquement identifiés dans AMI COMPTA (lien ISAGI via ISACOMPTA).\nLes utilisateurs peuvent activer AMI COMPTA à partir de la fiche client du dossier concerné (Comptabilité / Dossier lié avec AMI COMPTA) s'ils ont les droits d'accès."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.6008
+    },
+    {
+        "id": 48,
+        "question": [
+            "AMI COMPTA est-il adapté à une comptabilité de type trésorerie (ex. : BNC) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA pour le moment, ne traite que les comptabilités sur engagement. Pour les dossiers en comptabilité sur trésorerie, le traitement via relevés bancaires est à privilégier ou l'utilisation de DEMAT'EXPERT le cas échéant."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.0486
+    },
+    {
+        "id": 49,
+        "question": [
+            "Les règles de gestion peuvent-elles être partagées au-delà du périmètre du Cabinet ou de l'AGC ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Les règles de gestion et méthode de travail restent la propriété du Cabinet ou de l'AGC. AMI COMPTA capitalise et partage uniquement sur la manière généralisée de faire de la comptabilité."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.6292
+    },
+    {
+        "id": 50,
+        "question": [
+            "La ventilation se fait-elle uniquement par rapport au n° de dossier ? Que se passe-t-il en cas de n° identique entre Cabinet ou AGC ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "La base AMI COMPTA est globale pour l'ensemble de nos clients. Un cloisonnement \"domaine\" (fourni par ISACOMPTA) permet d'isoler les informations liées à chaque partenaire comptable. Ainsi, la ventilation se fait en fonction du numéro de dossier spécifique à chaque Cabinet ou AGC. En cas de numéros de dossier identiques entre différents Cabinets ou AGC, les informations seront correctement ventilées et isolées grâce à ce cloisonnement."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.8524
+    },
+    {
+        "id": 51,
+        "question": [
+            "Peut-on récupérer des éléments mis par erreur à la corbeille ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, vous pouvez récupérer des éléments mis par erreur à la corbeille en utilisant le bouton \"Restaurer\"."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.9543
+    },
+    {
+        "id": 52,
+        "question": [
+            "Quelles données restituent le tableau de bord présent dans AMI COMPTA que l'on peut partager aux clients ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le tableau de bord présent dans AMI COMPTA restitue les factures transmises et traitées."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.8228
+    },
+    {
+        "id": 53,
+        "question": [
+            "Comment sont traitées les factures électroniques dématérialisées (EDI, type Factur-X) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "La facturation électronique aide dans la compréhension des informations de base du document, mais il reste le travail d'affectation du compte qui, lui, est pris en charge par l'IA d'AMI COMPTA.\nLes factures électroniques (type Factur-x) intègrent un fichier de données avec plus ou moins de détails. Cependant, la majorité des factures transmises sont au format BASICWL, c'est à dire avec un minimum d'informations.\nAMI COMPTA permet de gommer l'hétérogénéité des données d'entrées et apporte son expertise de traitement des factures détaillées pour proposer des écritures comptables identiques, quelque soit l'origine des données.\nCela entraîne une performance plus grande dans la production automatique d'AMI COMPTA."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 4.4066
+    },
+    {
+        "id": 54,
+        "question": [
+            "Comment s'effectue la collecte des factures dans AMI COMPTA (scan, fichier reçu des fournisseurs…) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Quatre possibilités sont incluses dans l'abonnement AMI COMPTA :\n1. un robot qui récupère les factures sur un dossier partagé (arborescence à respecter)\n2. une interface d'import directement dans AMI COMPTA (import manuel)\n3. une interface d'import pour le client du Cabinet ou de l'AGC (accès personnel permettant au client de déposer ses documents)\n4. un intégrateur e-mail\nEn option, on a :\n- l’appairage avec Demat'Box (cf AMI COMPTA_Paramétrage DEMATBOX)\n- la DEMAT'GO inclus dans votre abonnement (cf page Services DEMAT)"
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.7011
+    },
+    {
+        "id": 55,
+        "question": [
+            "Est-il prévu une application smartphone pour prendre en photo une pièce et la déposer dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA est compatible avec la solution DEMAT'GO qui permet de prendre en photo une pièce depuis votre smartphone et de la déposer directement dans le logiciel. Cette fonctionnalité facilite la collecte des factures et simplifie le processus de saisie comptable."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.3536
+    },
+    {
+        "id": 56,
+        "question": [
+            "AMI COMPTA peut-il collecter les pièces scannées et déposées sur la GED ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Non. À ce jour, les documents doivent être téléchargés puis chargés dans AMI COMPTA ou mis dans un dossier auquel le robot collecteur AMI COMPTA a accès ou via l’intégrateur e-mail."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.6115
+    },
+    {
+        "id": 57,
+        "question": [
+            "Les fichiers qui sont intégrés par AMI COMPTA depuis un partage de serveur sont-ils supprimés de l'emplacement ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, une fois intégrés dans AMI COMPTA, les fichiers sont supprimés de leur emplacement initial."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.9246
+    },
+    {
+        "id": 58,
+        "question": [
+            "En import manuel de documents, est-il possible d’importer plusieurs fichiers en même temps ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, il est possible d'importer plusieurs fichiers en même temps lors de l'import manuel de documents dans AMI COMPTA. Vous pouvez importer jusqu'à 200 factures par lot."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.2381
+    },
+    {
+        "id": 59,
+        "question": [
+            "Est-il prévu de développer la partie « Collecte » d'AMI COMPTA à plus grande échelle ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA est principalement un outil permettant de traiter l'automatisation de l'écriture. Par ailleurs, AMI COMPTA propose déjà diverses solutions de collecte : import direct dans l'outil, intégrateur e-mail, interface d'import pour le client du Cabinet ou de l'AGC, import depuis dossier partagé ou encore, option DEMAT'GO / DEMAT'BOX."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.4353
+    },
+    {
+        "id": 60,
+        "question": [
+            "Existe-t-il une articulation avec My Company Files ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, un partenariat est passé avec My Company Files qui nous permet de mettre en place une API de connexion avec MCF."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1714
+    },
+    {
+        "id": 61,
+        "question": [
+            "Quelle qualité ou définition de scan est recommandée ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour un résultat performant, il est recommandé une résolution de 300 dpi en niveau de gris. On obtient un résultat optimal en 300 dpi, en couleur 16bits, et un résultat intermédiaire (selon scanner) en 150/200 dpi et/ou noir/blanc. Sur les zones grisées, AMI COMPTA pratique des traitements d'images spécifiques et adaptatifs. Cependant, cela reste un sujet complexe, qui n'a toujours pas trouvé de réponse à ce jour dans le monde informatique."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.382
+    },
+    {
+        "id": 62,
+        "question": [
+            "Quels formats et tailles de fichiers peuvent-être récupérés dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "En entrée, AMI COMPTA supporte les formats PDF, TIF, JPG, PNG. Au niveau de la taille, cela est variable selon la composition du document."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1135
+    },
+    {
+        "id": 63,
+        "question": [
+            "Que se passe-t-il si le document est de mauvaise qualité ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA va récupérer le maximum d'informations et demander au collaborateur de vérifier la saisie."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.933
+    },
+    {
+        "id": 64,
+        "question": [
+            "Les factures éditées par une imprimante matricielle seront-elles facilement traitées dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, les factures éditées par une imprimante matricielle seront facilement traitées dans AMI COMPTA. La lecture en place dans AMI COMPTA est meilleure que celle d'un outil OCR."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.3529
+    },
+    {
+        "id": 65,
+        "question": [
+            "L'outil fait-il la différence entre les factures d'achat et de vente ? Comment AMI COMPTA gère-t-il les documents qui sont assimilés à des factures ou qui ne correspondent pas à une facture (ex. : BL) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "AMI COMPTA ne gère que les factures d'achat et de vente. Plus il y aura de factures passées dans AMI COMPTA, plus ce dernier sera performant.\nPour le moment l’outil ne gère pas d'autres documents."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.711
+    },
+    {
+        "id": 66,
+        "question": [
+            "AMI COMPTA traite-il les factures manuscrites ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Les factures manuscrites sont difficilement traitées en automatique. Elles seront toujours présentées à l'utilisateur pour une saisie manuelle standard, ou une vérification si la facture manuscrite est suffisamment lisible. En revanche, il n'est pas gênant d'avoir des mentions manuscrites sur une facture, à condition que celles-ci ne gênent pas la lecture des informations clés (n° de facture, date, etc.)."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.2793
+    },
+    {
+        "id": 67,
+        "question": [
+            "AMI COMPTA traite-t-il une page A4 avec plusieurs facturettes (ex. : facturettes de carburant) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, AMI COMPTA gère ce cas grâce au découpage des multi-facturettes et propose d’avance un prédécoupage par l’IA que l’utilisateur n’a qu’à valider, rendant le découpage quasi immédiat."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.0508
+    },
+    {
+        "id": 68,
+        "question": [
+            "Le découpage se fait-il par rapport au n° des factures ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le numéro de facture influe sur le découpage des documents, mais il n’est qu’un facteur parmi tant d’autres que l’IA va considérer pour faire sa prédiction."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.0266
+    },
+    {
+        "id": 69,
+        "question": [
+            "Toutes les lignes présentes dans le menu « Comptabilité » sont-elles à valider (y compris les lignes avec un IC vert) ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, l'ensemble des lignes figurant dans le menu \"Comptabilité\" doivent être validées. Il faut les valider une à une."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.2231
+    },
+    {
+        "id": 70,
+        "question": [
+            "Pourquoi les factures en vert ne sont pas comptabilisées automatiquement ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Dans un projet d'intégration d'AMI COMPTA, il est important de gérer :\n- un bon apprentissage de l'IA, avec une validation répétée des factures en vert, afin de renforcer sa connaissance,\n- de s'assurer qu'il n'y a pas de changement dans la manière de saisir une facture (ex. : on saisit 30 fois de la même manière les factures d'un fournisseur, mais pour la 31ème facture, on fait différemment),\n- de rassurer les équipes en leur permettant de voir l'augmentation du vert.\n\nSi vous êtes confiants dans les prédictions d’AMI COMPTA pour les factures à picto vert, vous pouvez aller dans l’onglet « Administration » puis « Validation automatique des pictogrammes verts »"
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 5.307
+    },
+    {
+        "id": 71,
+        "question": [
+            "Quelles sont les erreurs que l'on peut rencontrer dans AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Les erreurs que l'on peut rencontrer dans AMI COMPTA peuvent porter sur différents aspects tels que la date de la facture (ex. : facture hors exercice), la contrepartie, la facture dans sa globalité, un doublon, les montants, le journal, le(s) compte(s), le(s) code(s) TVA, le(s) article(s), etc."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.8949
+    },
+    {
+        "id": 72,
+        "question": [
+            "Une fois la facture traitée par AMI COMPTA, où la retrouve-t-on ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Dans un premier temps, les documents traités dans AMI COMPTA sont transférés dans le système d'information d'ISACOMPTA, en même temps que les écritures. Puis, on les retrouve en pièce jointe de l'écriture correspondante. Les pièces jointes dans ISACOMPTA sont stockées dans le répertoire « GEF », paramétré dans l'application. Par défaut, on a un répertoire par dossier et par exercice comptable."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 3.4087
+    },
+    {
+        "id": 73,
+        "question": [
+            "Sous quel format et taille les fichiers traités dans AMI COMPTA sont-ils exportés ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "En sortie, AMI COMPTA exporte les fichiers traités au format TIF. Un traitement d'image est appliqué pour réduire drastiquement la taille du fichier final exporté."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1188
+    },
+    {
+        "id": 74,
+        "question": [
+            "Les écritures sont-elles modifiables après import dans ISACOMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, les écritures sont modifiables dans ISACOMPTA. Cependant, il est recommandé de les modifier dans AMI COMPTA afin que les modifications soient prises en compte lors des prochains traitements."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.9383
+    },
+    {
+        "id": 75,
+        "question": [
+            "Lors de la création d'un utilisateur que contient le mail envoyé à ce dernier ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Le mail envoyé à l'utilisateur lors de la création de son compte contient l'identifiant de connexion, un mot de passe temporaire et un lien vers AMI COMPTA. Si le mail est détecté comme spam, les images ne seront pas chargées."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.2314
+    },
+    {
+        "id": 76,
+        "question": [
+            "Est-il possible de personnaliser le mail envoyé au nouvel utilisateur ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Il est actuellement impossible de personnaliser le mail envoyé au nouvel utilisateur."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.531
+    },
+    {
+        "id": 77,
+        "question": [
+            "L'utilisateur a-t-il possibilité de faire \"mot de passe oublié\" ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Oui, l'utilisateur a la possibilité de réinitialiser son mot de passe en utilisant la fonctionnalité \"mot de passe oublié\". Un email lui sera envoyé avec les instructions pour réinitialiser son mot de passe."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 1.1438
+    },
+    {
+        "id": 78,
+        "question": [
+            "Quel est l’intérêt d’envoyer un mot de passe à l'utilisateur, qu’il puisse le modifier (donc confidentiel) et que l’administrateur puisse lui aussi modifier le mot de passe ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "L'envoi par mail du mot de passe à l'utilisateur permet de lui donner un accès immédiat à son compte. En lui permettant de le modifier, cela garantit la confidentialité de son mot de passe. L'administrateur peut également modifier le mot de passe si nécessaire, par exemple en cas de perte ou de compromission du mot de passe de l'utilisateur."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.1258
+    },
+    {
+        "id": 79,
+        "question": [
+            "Si l’administrateur modifie le mot de passe, le client reçoit-il un mail de modification ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Actuellement, le client ne recevra pas de mail automatique en cas de modification du mot de passe par l’administrateur."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.9244
+    },
+    {
+        "id": 80,
+        "question": [
+            "Qui est l’expéditeur du mail contenant le mot de passe temporaire de l'utilisateur ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "L’expéditeur du mail contenant le mot de passe temporaire de l'utilisateur est AMI COMPTA avec l’adresse noreply@email.ami-compta.fr."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.868
+    },
+    {
+        "id": 81,
+        "question": [
+            "Comment supprimer un dossier ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour supprimer un dossier d’AMI COMPTA, vous pouvez suivre les étapes suivantes :\n\n1. Assurez-vous que le dossier est vide : Vérifiez qu’il n’y ait pas de document en découpage, dans la banette de découpage, en comptabilité ou en gare de tri pour le dossier que vous souhaitez supprimer.\n\n2. Désactivez le dossier : Sur la fiche client ISAGI, dans la partie « Comptabilité », décochez la case « Dossier lié à AMI COMPTA » pour désactiver le dossier.\n\n3. Attendez la suppression : Le dossier sera supprimé automatiquement le lendemain de sa désactivation."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.7552
+    },
+    {
+        "id": 82,
+        "question": [
+            "Comment saisir une écriture Intracom ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Pour saisir une écriture Intracom, vous devez suivre les étapes suivantes :\n\n1. Assurez-vous que les codes de TVA sont correctement paramétrés dans Isacompta (Paramètre/code de TVA).\n\n2. Saisissez l'écriture en utilisant uniquement le code de TVA U5 (compte 6 et compte 445).\n\n3. Lorsque l'écriture est importée dans Isacompta, le code de TVA T5 sera automatiquement affecté en fonction du paramétrage."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 2.7515
+    },
+    {
+        "id": 83,
+        "question": [
+            "Pourquoi t’appelle-tu SAMI ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Je m'appelle SAMI car je suis le produit de la fusion entre ISA et AMI, d'où le nom SAMI."
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            }
+        ],
+        "temps de réponse": 0.7444
+    }
+]

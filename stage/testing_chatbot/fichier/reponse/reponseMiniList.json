@@ -1,0 +1,117 @@
+[
+    {
+        "id": 0,
+        "question": [
+            "Que signifient les couleurs de pictogrammes ?",
+            "Quels sont les pictos d’AMI COMPTA ?",
+            "Tu m'explique les couleurs de pictos ?"
+        ],
+        "reponse": [
+            {
+                "content": {
+                    "documentation_page": "pictograms",
+                    "message": "Voici une explication sur les couleurs des pictogrammes dans AMI COMPTA :"
+                },
+                "id": 1,
+                "name": "provide_documentation",
+                "role": "assistant",
+                "type": "function"
+            }
+        ],
+        "temps de réponse": 0.9309
+    },
+    {
+        "id": 1,
+        "question": [
+            "Tu peux m'expliquer s'il y a des raccourcis clavier sur AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": {
+                    "documentation_page": "shortcuts",
+                    "message": "Bien sûr ! Voici les raccourcis clavier utilisables dans AMI COMPTA :"
+                },
+                "id": 1,
+                "name": "provide_documentation",
+                "role": "assistant",
+                "type": "function"
+            }
+        ],
+        "temps de réponse": 0.639
+    },
+    {
+        "id": 2,
+        "question": [
+            "Trouve moi les 8 factures edf en avril 2023"
+        ],
+        "reponse": [
+            {
+                "content": {
+                    "date_type": "billing_date",
+                    "end_date": "2023-04-30",
+                    "exercise": "any",
+                    "folder": "current",
+                    "location": "any",
+                    "provider": "EDF",
+                    "start_date": "2023-04-01"
+                },
+                "id": 1,
+                "name": "find_invoices",
+                "role": "assistant",
+                "type": "function"
+            }
+        ],
+        "temps de réponse": 1.0644
+    },
+    {
+        "id": 3,
+        "question": [
+            "trace moi un graphe ?"
+        ],
+        "reponse": [
+            {
+                "content": {
+                    "data_from": "any",
+                    "end_date": "2023-12-31",
+                    "graph_type": "line",
+                    "message": "Voici un graphique.",
+                    "start_date": "2023-01-01",
+                    "title": "Graphe",
+                    "x": "date",
+                    "y": "invoice"
+                },
+                "id": 1,
+                "name": "plot_graph",
+                "role": "assistant",
+                "type": "function"
+            }
+        ],
+        "temps de réponse": 0.9979
+    },
+    {
+        "id": 4,
+        "question": [
+            "Quelles sont les futures évolutions d’AMI COMPTA ?"
+        ],
+        "reponse": [
+            {
+                "content": [
+                    "Je suis navré de ne pas pouvoir vous répondre précisément au sujet des évolutions récentes ou futures des fonctionnalités d’AMI COMPTA. Cependant, AMI COMPTA bénéficie de mises à jour régulières pour en améliorer le confort d’utilisation, les systèmes automatisés et les interactions avec les autres outils AGIRIS.\n\nSi vous désirez consulter ou proposer de nouvelles évolutions pour AMI COMPTA, vous pouvez nous en faire part sur Upvoty.\n\nDocument link(s) :\n\nami-compta"
+                ],
+                "id": 1,
+                "role": "assistant",
+                "type": "text"
+            },
+            {
+                "content": [
+                    "ami-compta",
+                    "https://evolutions.agiris.fr/b/ami-compta"
+                ],
+                "id": 1,
+                "role": "knowledge",
+                "type": "link"
+            }
+        ],
+        "temps de réponse": 2.2269
+    }
+]
